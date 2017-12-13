@@ -7,27 +7,14 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	height: 720px;
-	align-content: center;
+	height: 720px
 }
 
-.main .search{
-	width: 200px;
-	height: 50px;
-	margin: 2em;
-	display:inline-block;
-}
 
-.main .search .search-select-tab{
-	width: 170px;
-	height: 40px;
+.main .category{
 	margin:auto;
 }
 
-.main .search .main-search-button{
-	height: 40px;
-	width: 100px;
-	border: none;
-	background-color: white;
-	border-radius: 10px;
-}
+.main .col-md-4{
+	align-items: center;
+ }
