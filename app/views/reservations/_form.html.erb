@@ -1,8 +1,14 @@
-<%= form_for @reservation do |f|%>
-  <%= f.hidden_field :listing_id%>
+<%= form_for [@listing, @reservation] do |f|%>
+  <%= f.hidden_field :listing_id, value: @listing.id%>
+  <br>
   <%= f.label "book at"%>
   <%= f.datetime_field :start_time%>
+  <br>
   <%= f.label "ends at"%>
   <%= f.datetime_field :end_time%>
+  <br>
+  <%= f.label "number of guests" %>
+  <%= f.number_field :guest_number %>
+  <br>
   <%= f.submit %>
 <% end %>

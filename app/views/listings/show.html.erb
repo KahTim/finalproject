@@ -4,3 +4,4 @@
 <%= @listing.category%>
 <%= @listing.price%>
 <%= image_tag @listing.avatar%>
+<%= link_to "click here to book", new_listing_reservation_path(@listing.id) %>
