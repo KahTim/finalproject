@@ -1,0 +1,8 @@
+<%= form_for @reservation do |f|%>
+  <%= f.hidden_field :listing_id%>
+  <%= f.label "book at"%>
+  <%= f.datetime_field :start_time%>
+  <%= f.label "ends at"%>
+  <%= f.datetime_field :end_time%>
+  <%= f.submit %>
+<% end %>
