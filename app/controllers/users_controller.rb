@@ -16,12 +16,15 @@ class UsersController < Clearance::UsersController
 
 	def update
 		@user = User.find(current_user.id)
-			if @user.update_attributes(user_params)
-				redirect_to home_index_path
-			else
-				redirect_to edit_user_path(current_user.id)
-			end
+		if @user.update_attributes(user_params)
+			redirect_to home_index_path
+		else
+			redirect_to edit_user_path(current_user.id)
+		end
 	end
+
+	def show 
+	end 
 
 	private 
 
