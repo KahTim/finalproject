@@ -13,11 +13,13 @@ class ListingsController < ApplicationController
 	
 	def create
 		@listing = Listing.new(params_for_listings)
+
 		if @listing.save
 			redirect_to root_url
 		else
 			redirect_to new_listing_path
 		end
+
 	end
 	
 	def edit
@@ -36,7 +38,7 @@ class ListingsController < ApplicationController
 private
 
 	def params_for_listings
-		params.require(:listing).permit(:avatar, :category, :price)
+		params.require(:listing).permit({avatar: []}, :category, :price)
 	end
 
 	def filtering_params(params)
