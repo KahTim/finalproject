@@ -4,15 +4,17 @@ Rails.application.routes.draw do
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
   resource :session, controller: "clearance/sessions", only: [:create]
 
-  resources :users, controller: "clearance/users", only: [:create] do
+  resources :users, controller: "users", only: [:create, :edit, :update] do
     resource :password,
       controller: "clearance/passwords",
       only: [:create, :edit, :update]
     resources :reservations, controller: "reservations"
   end
+
   resources :listings,controller: "listings" do 
     resources :reservations, controller: "reservations"
   end 
+
   get "/sign_in" => "clearance/sessions#new", as: "sign_in"
   delete "/sign_out" => "clearance/sessions#destroy", as: "sign_out"
   get "/sign_up" => "clearance/users#new", as: "sign_up"
@@ -20,6 +22,5 @@ Rails.application.routes.draw do
 
 	get "/auth/:provider/callback" => "sessions#create_from_omniauth"
 
-	root 'listings#index'
-
+	root 'home#index'
 end

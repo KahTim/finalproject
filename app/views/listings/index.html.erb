@@ -1,7 +1,5 @@
-<% @listings.each do |t|%>
-	<h2> <%= t.title%> </h2>
-	<p> address: <%= t.address%> </p>
-	<p> city: <%= t.city%> </p>
-	<p> category: <%= t.category%> </p>
-	<p> price: <%= t.price%> </p>
-<% end %>
+
+Listing index
+<% @listings.each do |t| %>
+	<p><%=link_to t.title, t%></p>
+<%end%>	
