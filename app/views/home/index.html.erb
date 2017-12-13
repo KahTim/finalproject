@@ -1,9 +1,11 @@
 <div class="main">
-</div> 
 
-<<<<<<< HEAD
-<h1 class="red"> hi </h1>
-=======
+	<%= form_tag(listings_path, method: :get, class:"search") do %>
+	  <%= select_tag :city, options_from_collection_for_select(Listing.select(:city).distinct.order(:city),"city","city"), class:"search-select-tab" %>
+	  <%= submit_tag 'Search', name: nil, class:"main-search-button" %>
+	  <br>
+	<%end%>
+</div> 
 	<%#= image_tag current_user.image %>
 <%= link_to "Listing Index",listings_path%>
 <% if current_user.management? %>
@@ -11,14 +13,6 @@
 <% end %>
 
 	<div> <%= link_to "Edit Profile", edit_user_path(current_user.id) %> </div>
-<% end %>
 
-<%= form_tag(listings_path, method: :get) do %>
-  <%= select_tag :city, options_from_collection_for_select(Listing.select(:city).distinct.order(:city),"city","city") %><br>
-  <%= submit_tag 'Search', name: nil %><br>
-<br>
-<%= link_to "Back", root_path %>
-<%end%>
 
 <%= link_to "Make Payment", braintree_new_path %>
->>>>>>> 7958fbf18a27fbc7fb5d4db8ec476668c632f0bf
