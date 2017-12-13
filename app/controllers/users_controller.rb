@@ -1,3 +1,5 @@
+require 'byebug'
+
 class UsersController < Clearance::UsersController
 	
 	def edit
@@ -29,7 +31,24 @@ class UsersController < Clearance::UsersController
 	private 
 
 	def user_params
-		params.require(:user).permit(:name, :email, :password, :avatar)
+		if current_user.customer?
+			params.require(:user).permit(:name, :email, :password, :avatar)
+		else
+		 if params[:password]
+		 	params.require(:user).permit(:name, :email, :password, :avatar, :manager_name, :property_type, :contact_number, :address, :city)
+		 else
+		 	params.require(:user).permit(:name, :email, :avatar, :manager_name, :property_type, :contact_number, :address, :city)
+		 end
+		end 
 	end
+
+	# def management_params
+	# 	if params[:password]
+	# 		params.require(:user).permit(:name, :email, :password, :avatar, :manager_name, :property_type, :contact_number, :address, :city)
+	# 	else
+	# 		params.require(:user).permit(:name, :email, :avatar, :manager_name, :property_type, :contact_number, :address, :city)
+	# 	end
+	# 	# params.delete(:password) unless management_params[:password].present?
+	# end
 
 end

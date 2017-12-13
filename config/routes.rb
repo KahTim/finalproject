@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'braintree/new'
+
   get 'home/index'
 
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
@@ -10,7 +12,7 @@ Rails.application.routes.draw do
       only: [:create, :edit, :update]
   end
 
-  resources :listings,controller: "listings" do 
+  resources :listings, controller: "listings" do 
     resources :reservations, controller: "reservations"
   end 
 
@@ -20,6 +22,6 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 	get "/auth/:provider/callback" => "sessions#create_from_omniauth"
-
+  post 'braintree/checkout'
 	root 'home#index'
 end

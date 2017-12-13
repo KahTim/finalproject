@@ -1,3 +1,139 @@
 // Place all the styles related to the listings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// CSS for Listing Show
+#main_image{
+    padding:0px;
+    margin:0px;
+    width:100%;
+    height: auto;
+	text-align: center;
+}
+
+#container_box{
+  padding:0px;
+  margin:0px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+#main_information{
+  width: 70%;
+  padding: 0px;
+  margin: 5px;
+  text-align: left;
+  background-color: #E0E0E0;
+  border-radius: 3px;
+  vertical-align: top;
+}
+
+#main_information p{
+    padding-left:5px;
+}
+#main_information p.listing-title2{
+    font: bold;
+    font-size:  1.5em;
+}
+
+
+#reservation_form{
+  width: 30%;
+  text-align: left;
+  padding: 12px;
+  background-color: #E0E0E0;
+  border-radius: 3px;
+  margin: 5px;
+}
+@media screen and (max-width: 600px)
+{
+  #main_information, #reservation_form
+    {
+       max-width: 100%;
+    }
+}
+
+//CSS for Listing Index
+.flex-container{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+
+.flex-container>div{
+margin: 5px 5% 5px 5%;
+}
+
+img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
+    padding: 2px;
+    height: 60px;
+    width: 60px;
+}
+
+.category:hover{
+    background: #eaecef;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+
+
+#flex-layout-listings{
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#flex-layout-listings>.listing-column{
+    width: 30%;
+    height: 30vw;
+    text-align: center;
+
+    margin: 7px;
+}
+
+.listing-column{
+    border-radius:16px;
+    background:#E0E0E0;
+}
+
+.listing-image{
+    width:100%;
+    height:70%;
+    margin:0px;
+    padding:0px;
+    line-height: 1px;
+    border-radius: 16px;
+}
+
+.listing-column p{
+    padding-left:8px;
+    margin: 0px;
+    text-align: left;
+}
+
+.listing-column p .listing-title{
+    font: bold;
+}
+
+@media screen and (max-width: 782px) {
+    .flex-container>div {
+        margin: 5px 3.5% 5px 3.5%;
+    }
+}
+@media screen and (max-width: 782px) {
+    #flex-layout-listings>.listing-column{
+        width: 45%;
+        height: 40vw;
+    }
+.listing-column>.listing-image{
+    height: 80%
+}
+}
+
+
+

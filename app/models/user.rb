@@ -3,11 +3,17 @@ class User < ApplicationRecord
 
   # include Clearance::User
 
+  validates :password, presence: true, if: :should_validate?
+
+  def should_validate?
+    self.new_record? || self.password.present?
+  end
+
   has_many :authentications, dependent: :destroy
   #mount_uploader :avatar, AvatarUploader #use fb picture
-  has_many :listings, dependent: :destroy
+  # has_many :listings, dependent: :destroy
   has_many :reservations
-   
+  enum role: [ :customer, :management ] 
 
   def self.create_with_auth_and_hash(authentication, auth_hash)
     user = self.create!(
