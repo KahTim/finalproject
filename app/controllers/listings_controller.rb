@@ -1,6 +1,9 @@
 class ListingsController < ApplicationController
 	def index
 		@listings = Listing.all
+		filtering_params(params).each do |key, value|
+    	@listings = @listings.public_send(key, value) if value.present?
+  		end
 	end
 
 	def new
@@ -31,5 +34,8 @@ class ListingsController < ApplicationController
 private
 	def params_for_listings
 		params.require(:listing).permit(:title,:address,:city,:type,:price)
+	end
+	def filtering_params(params)
+  		params.slice(:city)
 	end
 end

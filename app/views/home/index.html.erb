@@ -7,3 +7,10 @@
 
 	<div> <%= link_to "Edit Profile", edit_user_path(current_user.id) %> </div>
 <% end %>
+
+<%= form_tag(listings_path, method: :get) do %>
+  <%= select_tag :city, options_from_collection_for_select(Listing.select(:city).distinct.order(:city),"city","city") %><br>
+  <%= submit_tag 'Search', name: nil %><br>
+<br>
+<%= link_to "Back", root_path %>
+<%end%>
