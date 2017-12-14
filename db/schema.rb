@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 20171219073823) do
     t.string "city"
     t.string "category"
     t.integer "price"
-    t.json "avatar"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -14,7 +14,7 @@
   padding:0px;
   margin:0px;
   width:100%;
-  height: auto;
+  height: 720px;
 	text-align: center;
 }
 
@@ -58,6 +58,10 @@
 #main_information p.listing-description{
     line-height: 150%;
     padding-top: 10px;
+}
+
+#reservation-calendar{
+  border: 2px solid black
 }
 
 
@@ -108,6 +112,14 @@
    text-align: center;
 }
 
+.recommended .listing-image-sample{
+  width: 220px;
+  height: 200px;
+}
+
+.recommended .listing-image-sample:hover{
+  opacity: .7;
+}
 
 @media (max-width:782px){
   #listing-wrapper-left-column p{

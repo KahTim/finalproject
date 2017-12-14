@@ -14,16 +14,16 @@
             <th>Total Price</th>
           </tr>
         </thead>
-          <tr>
             <% @reservation.each do |r|%>
-            <td><%= r.listing.title%></td>
-            <td><%= r.listing.address%>, <%= r.listing.city%></td>
-            <td><%= r.listing.category%></td>
-            <td><%= r.start_time %></td>
-            <td><%= r.end_time %></td>
-            <td><%= (r.end_time - r.start_time)/3600 %> Hours</td>
-            <td>RM <%= (r.listing.price) * (r.end_time - r.start_time)/3600%></td>
+              <tr>
+                <td><%= r.listing.title%></td>
+                <td><%= r.listing.address%>, <%= r.listing.city%></td>
+                <td><%= r.listing.category%></td>
+                <td><%= r.start_time %></td>
+                <td><%= r.end_time %></td>
+                <td><%= (r.end_time - r.start_time)/3600 %> Hours</td>
+                <td>RM <%= (r.listing.price) * (r.end_time - r.start_time)/3600%></td>
+              </tr>
             <%end%>
-          </tr>
     </table>
 </div>
