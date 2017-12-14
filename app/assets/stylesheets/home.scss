@@ -28,9 +28,20 @@
 
 .navbar-custom{
 	text-align: center;
-	height: 60px;
+}
+
+.navbar-custom .navbar-header{
+	width: 65px;
+	height: 65px;
+}
+
+.navabar-custom .signout{
+	width: 65px;
+	height: 65px;
 }
 
 .navbar-custom .profile-pic{
 	border-radius: 100px;
+	width: 35px;
+	height: 35px;
 }
