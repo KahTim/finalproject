@@ -60,7 +60,7 @@
 
 #main_information p.listing-description{
     line-height: 150%;
-    padding-top: 10px;
+    padding: 10px;
 }
 
 #reservation-calendar{
@@ -77,8 +77,6 @@
 }
 
 
-
-
 #listing-amenities{
   background-color: white;
   display: flex;
@@ -87,17 +85,21 @@
 
 #left-amenity-column{
   flex: 1;
-  padding-left:10px;
+  padding:10px;
   border-radius: 5px;
 }
 
 #right-amenity-column{
   flex: 1;
+  padding: 5px;
 }
 #amenity div{
   display:inline-block;
 }
 
+#amenity img{
+background-color: white;
+}
 // HOUSE STYLING///////
 .wrap-house-rules{
   border: 1px solid white;
@@ -108,7 +110,7 @@
 #house-rules-flex{
   display:flex;
   background-color: white;
-  padding-left:10px;
+  padding:10px;
 }
 #house-rules-flex h3{
   display:inline;
