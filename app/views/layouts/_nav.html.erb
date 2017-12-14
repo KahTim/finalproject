@@ -1,8 +1,9 @@
 <ul>
   <div class="navbar-header">
     <%= link_to "Tether", root_path, class:"navbar-brand"%>
-  </div>  <li><a href="/listings">All Listings</a></li>
-  <lu class="navbar-right">
+  </div>  
+  <li><a href="/listings">All Listings</a></li>
+  <ul class="navbar-right">
        <% if signed_in?%>
           <%if current_user.image == nil%>
             <li><%= link_to (image_tag 'profile_picture', {class:"profile-pic"}) ,user_path(current_user.id) %></li>
@@ -12,7 +13,7 @@
        <% else %>
           <li><%= link_to "sign in", sign_in_path, {class:"sign_in_button"}%></li>
        <% end %>
-      </lu>
+    </ul>
 </ul>
   
 

@@ -19,7 +19,7 @@
    align-items: center;
    text-align: center;
    width:350px;
-   height:420px;
+   height:370px;
    display: inline-block;
 
 }
@@ -57,6 +57,7 @@
 
 .category:hover{
    opacity: .8;
+   background-color: white;
 }
 
 
@@ -77,8 +78,8 @@
 
 .navbar-custom .profile-pic{
 	border-radius: 100px;
-	width: 35px;
-	height: 35px;
+	width: 40px;
+	height: 40px;
 }
 
 //////* search box */////////
@@ -129,6 +130,16 @@ zoom:1;
 .top h1{
    color: white;
    font-family: 'Julius Sans One', sans-serif;
+}
+
+.top h3{
+   font-family: 'Comfortaa', cursive;
+
+}
+
+.buttons h1{
+  font-family: 'Libre Baskerville', serif;
+
 }
 
 .form-wrapper-2 {

@@ -67,6 +67,7 @@
 }
 
 
+
 // AMENITY STYLING//////////
 .wrap-amenities{
   border: 1px solid white;
@@ -138,6 +139,29 @@
   margin: 0;
 }
 
+#reservation-calander h4{
+  color: black;
+}
+
+#reservation-calander{
+  display: inline-flex;
+  width: 600px;
+  border: 2px solid black;
+}
+
+
+#reservation-calander .calender-submit{
+  width: 200px;
+  border: 1px solid orange;
+  background-color: white;
+  color: orange;
+}
+
+#reservation_duration{
+  width: 100px;
+  height: 40px;
+}
+
 .recommended{
   text-align: center;
 }
@@ -182,7 +206,7 @@ hr {
     width: 100%;
     display:flex;
     justify-content: center;
-    background-color: #A9A9A9;
+    border: 2px solid black;
     padding: 12px 0 12px 0;
 }
 
@@ -194,13 +218,11 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
     padding: 2px;
     height: 60px;
     width: 60px;
-    background-color: #A9A9A9;
 }
 
 .category:hover{
-    background-color: #ccdfcb;
-    border: 2px solid black;
-    border-radius: 5px;
+  background-color: rgba(169, 169, 169, .3);
+  border-radius: 10px;
 }
 
 
@@ -217,7 +239,6 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
     width: 30%;
     height: 30vw;
     text-align: center;
-
     margin: 7px;
 }
 
@@ -234,6 +255,11 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
     line-height: 1px;
     border-radius: 16px;
 }
+
+.listing-image:hover{
+  opacity: .7;
+}
+
 
 .listing-column p{
     padding-left:8px;

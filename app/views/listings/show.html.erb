@@ -25,22 +25,22 @@
 
         <div id="left-amenity-column">
           <div id="amenity">
-            <div><%= image_tag "wifi.png"%></div>
+            <div><%= image_tag "wifi.png", {class:"small-image"}%></div>
             <div><p>Wireless Internet</p></div>
           </div>
           <div id="amenity">
-            <div><%= image_tag"bathroom.png"%></div>
+            <div><%= image_tag"bathroom.png", {class:"small-image"}%></div>
             <div><p>Restrooms</p></div>
           </div>
         </div>
 
         <div id="right-amenity-column">
           <div id="amenity">
-            <div><%= image_tag"Elevator.png"%></div>
+            <div><%= image_tag"Elevator.png", {class:"small-image"}%></div>
             <div><p>Elevator</p></div>
           </div>
           <div id="amenity">
-            <div><%= image_tag"parking.png"%></div>
+            <div><%= image_tag"parking.png", {class:"small-image"}%></div>
             <div><p>Street Parking</p></div>
           </div>
         </div>
@@ -74,33 +74,29 @@
 
    <div id="reservation_form">
    <!-- <input type="button" class='datepicker' > -->
+  
     <h2> Book Now!</h2>
     <%= form_for [@listing, @reservation] do |form| %>
 
+     <%= form.text_field :start_time, id: "datetimepicker" %>
      <div id="reservation-calander">
-       <%= form.text_field :start_time, id: "datetimepicker" %>
-       <div>
-        <h3> Duration of booking </h3>  
-         <br>
-         <%= form.select :duration, options_for_select(Reservation::TIME_OPTIONS) %>
+        <h4> Duration of booking : </h4>  
+        <%= form.select :duration, options_for_select(Reservation::TIME_OPTIONS), class:"calender-select"%>
+       <div class="submit-field">
+         <%= form.submit "confirm booking" , :class => 'calendar-submit', :style =>"margin-bottom: 15px; margin-left: 40px; width: 120px; border: 2px solid orange; background-color: white; color: orange; border-radius: 5px;"%>
        </div>
-     </div>
+    <% end %>
 
-     <div class="submit-field">
-       <%= form.submit %>
-     </div>
-   <% end %>
-
-   <script type="text/javascript">
-     $(document).ready(function(){
-       jQuery('#datetimepicker').datetimepicker({
-         inline: true
+     <script type="text/javascript">
+       $(document).ready(function(){
+         jQuery('#datetimepicker').datetimepicker({
+           inline: true
+         });
        });
-     });
-   </script>
-     <p>Price per hour: RM<%= @listing.price%></p>
-     <!-- <p><%= link_to "click here to book", new_listing_reservation_path(@listing.id) %></p> -->
-   </div>
+     </script>
+       </div>
+       <p class="price-per-hour">Price per hour: RM<%= @listing.price%></p>
+     </div>
 </div>
 
 <div class="recommended">
