@@ -3,28 +3,25 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
 
 .main{
-/*	background-image: url("background_pic.png");
-*/	background-repeat: no-repeat;
+	background-image: url("background_pic.png");
+	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 	height: 720px
 }
 
-.main .buttons{
-	width: 450px;
-	height: 350px;
-	margin: auto;
-}
 
-.main .badminton, .bbq, .basketball, .gym, .swim, .tennis{
+.main .category .badminton, .bbq, .basketball, .gym, .swim, .tennis{
 	width: 90px;
 	height: 90px;
-	margin: auto;
+	margin-left:7em;
 }
 
 .main .category{
 	border: 2px solid black;
-	margin: auto;
-	width: 100px;
-	height: 100px;
+	align-items: center;
+}
+
+.buttons{
+	margin-top: 10em;
 }
