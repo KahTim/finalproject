@@ -1,27 +1,59 @@
-<div class="main">
-
-	<div class="button_box2">
-		<%= form_tag(listings_path, method: :get, class:"form-wrapper-2 cf") do %>
-		  <%= select_tag :city, options_from_collection_for_select(Listing.select(:city).distinct.order(:city),"city","city"), class:"search-select-tab" %>
-		  <%= submit_tag 'Search', name: nil, class:"button" %>
-		<%end%>
+<div class="main jumbotron">
+	<div class ="top">
+		<h1> FacHub </h1>
+		<h3> Sharing underutilized space </h3>
+		<div class="button_box2">
+			<h3> Find a facility near you now </h3>
+			<%= form_tag(listings_path, method: :get, class:"form-wrapper-2 cf") do %>
+			  <%= select_tag :city, options_from_collection_for_select(Listing.select(:city).distinct.order(:city),"city","city"), class:"search-select-tab" %>
+			  <%= submit_tag 'Search', name: nil, class:"button" %>
+			<%end%>
+		</div>
 	</div>
 </div> 
 	
 	<div class="container-fluid">
 		<div class="buttons">
+			<h1> Facilities Available For Rent </h1>
 			<div class="row1">
-				<div class="category"><%=link_to (image_tag "apartment_bbq.jpg", {class:"image"}), listings_path(category: 'BBQ' )%> BBQ Pits</div>
-				<div class="category"><%=link_to (image_tag "apartment_bmt.jpg", {class:"image"}), listings_path(category: 'Badminton' )%> Badminton Courts </div>
-			    <div class="category"><%=link_to (image_tag "apartment_bkb.jpg", {class:"image"}), listings_path(category: 'Basketball' )%> Basketball Courts</div>
+				<div class="category">
+					<%=link_to (image_tag "apartment_bbq.jpg", {class:"image"}), listings_path(category: 'BBQ' )%>
+					<div class="overlay">
+						<h1 class="text"> BBQ Pits </h1>
+					</div>
+				</div>
+
+				<div class="category">
+					<%=link_to (image_tag "apartment_bmt.jpg", {class:"image"}), listings_path(category: 'Badminton' )%>
+					 <h1> Badminton Courts </h1>
+				</div>
+
+			    <div class="category">
+					<%=link_to (image_tag "apartment_bkb.jpg", {class:"image"}), listings_path(category: 'Basketball' )%> 
+					<h1> Basketball Courts </h1>
+				</div>
+
 			</div>
 
 			<br>
+			<br>
 
 			<div class="row2">
-			    <div class="category "><%=link_to (image_tag "apartment_gym.jpg", {class:"image"}), listings_path(category: 'GYM' )%> Gyms </div>
-			    <div class="category"><%=link_to (image_tag "apartment_pool.jpg", {class:"image"}), listings_path(category: 'Swimming Pool' )%> Swimming Pools </div>
-			    <div class="category"><%=link_to (image_tag "apartment_tennis.JPEG", {class:"image"}), listings_path(category: 'Tennis' )%> Tennis Courts</div>
+			    <div class="category ">
+			    	<%=link_to (image_tag "apartment_gym.jpg", {class:"image"}), listings_path(category: 'GYM' )%>
+			    	<h1> Gyms </h1> 
+			    </div>
+
+			    <div class="category">
+			    	<%=link_to (image_tag "apartment_pool.jpg", {class:"image"}), listings_path(category: 'Swimming Pool' )%> 
+			    	<h1> Swimming Pools</h1>
+			    </div>
+
+			    <div class="category">
+			    	<%=link_to (image_tag "apartment_tennis.JPEG", {class:"image"}), listings_path(category: 'Tennis' )%> 
+			    	<h1> Tennis Courts </h1>
+			  	</div>
+
 			</div>
 		</div>
 	</div>
