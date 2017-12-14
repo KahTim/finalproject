@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20171213125447) do
     t.string "city"
     t.string "category"
     t.integer "price"
+    t.string "avatar"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
