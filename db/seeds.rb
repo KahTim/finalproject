@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #  Database for listing
-	Listing.create(title: "Puchong Royal Club House",address: "Jalan Example 1",city: "Puchong",category: "Badminton",price: 50)
-	Listing.create(title: "Happy Condominium",address: "Jalan Example 2",city: "Puchong",category: "Tennis",price: 40)
+	Listing.create(title: "Puchong Royal Club House",address: "Jalan Example 1",city: "Puchong",category: "Badminton",price: 50,remote_avatar_url: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?h=350&auto=compress&cs=tinysrgb')
+	Listing.create(title: "Happy Condominium",address: "Jalan Example 2",city: "Puchong",category: "Tennis",price: 40,remote_avatar_url: 'https://images.contentstack.io/v3/assets/blt8adf268f757b513a/blt606135e58e42aac0/59de85c0c0eddd140d5a8b4a/download')
 	Listing.create(title: "Ceria Condominium",address: "Jalan Example 3",city: "Puchong",category: "BBQ",price: 30)
 	Listing.create(title: "Ping Pong Club House",address: "Jalan Example 4",city: "Puchong",category: "Ping Pong",price: 25)
 	Listing.create(title: "Seriamas Condominium",address: "Jalan Example 5",city: "Damansara",category: "Swimming Pool",price: 55)	
