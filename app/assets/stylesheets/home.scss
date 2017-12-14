@@ -1,3 +1,36 @@
-// Place all the styles related to the home controller here.
+/*// Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
+
+.main{
+	background-image: url("background_pic.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 720px
+}
+
+
+.main .category .badminton, .bbq, .basketball, .gym, .swim, .tennis{
+	width: 90px;
+	height: 90px;
+	margin-left:7em;
+}
+
+.main .category{
+	border: 2px solid black;
+	align-items: center;
+}
+
+.buttons{
+	margin-top: 10em;
+}
+
+.navbar-custom{
+	text-align: center;
+	height: 60px;
+}
+
+.navbar-custom .profile-pic{
+	border-radius: 100px;
+}
