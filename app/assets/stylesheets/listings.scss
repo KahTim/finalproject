@@ -60,6 +60,7 @@
     padding-top: 10px;
 }
 
+
 // AMENITY STYLING//////////
 #listing-amenities{
   background-color:#E0E0E0;
@@ -102,6 +103,11 @@
   padding-left: 10px;
   margin-top: 5px;
 }
+
+.recommended{
+   text-align: center;
+}
+
 
 @media (max-width:782px){
   #listing-wrapper-left-column p{
