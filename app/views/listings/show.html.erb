@@ -1,4 +1,7 @@
-<div><%= image_tag @listing.avatar,{id:'main_image'}%></div>
+<!-- <div><%= image_tag @listing.avatar,{id:'main_image'}%></div>
+ --><!--uncomment to use the listing avatar-->
+
+ <div> <%=image_tag "apartment1.jpeg",{id:"main_image"} %> </div>
 
 
   <div id="listing-wrapper">
@@ -25,7 +28,6 @@
     </div>
 
 <!-- HTML for fake amenities/data -->
-<hr>
     <h5 class="titles">Amenities</h5>
     <div id="listing-amenities">
       <div id="left-amenity-column">
@@ -51,7 +53,6 @@
         </div>
       </div>
     </div>
-<hr>
 
     <h5 class="titles">House Rules</h5>
     <div id="house-rules-flex">
@@ -75,4 +76,16 @@
     <p>Reschedule up to 12 hours before alotted time</p>
   </div>
 </div> <!-- </div> Listing wrapper keep dont delete -->
+</div>
+
+<div class="recommended">
+    <h1> Check Out This Other Places! </h1>
+    <% @recommended.sample(4).each do |t| %>
+      <div class="others col-md-3">
+        <%=link_to(image_tag(t.avatar, :class => "listing-image"), t)%>
+        <p class="listing-title"><%=t.title%></p>
+        <p class="listing-city"><%=t.city%></p>
+        <p class="listing-price"><span>Cost per hour: RM</span><%=t.price%></p>
+      </div>
+    <%end%>
 </div>
