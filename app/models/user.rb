@@ -5,7 +5,7 @@ class User < ApplicationRecord
 
   has_many :authentications, dependent: :destroy
   #mount_uploader :avatar, AvatarUploader #use fb picture
-  has_many :listings, dependent: :destroy
+  # has_many :listings, dependent: :destroy
   has_many :reservations
    
 
