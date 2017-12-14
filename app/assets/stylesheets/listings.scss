@@ -33,6 +33,7 @@
     background-color: #E0E0E0;
     margin:0px;
     padding-left:10px;
+    font-size: 1.5em;
 }
 
 #main_image{
@@ -63,6 +64,7 @@
 #listing-wrapper-left-column{
   flex: 3;
   height:600px;
+  overflow: auto;
 }
 
 #main_information{
@@ -103,6 +105,7 @@
   border: 1px solid white;
   border-radius: 5px;
   margin: 5px;
+  margin-bottom: 10px;
 }
 
 
@@ -157,8 +160,7 @@ background-color: white;
 #cancellation{
   background-color: white;
   padding-left: 10px;
-  margin-top: 5px;
-  height: 101px;
+  height: 95px;
 }
 
 .wrap-cancellation{
@@ -207,8 +209,8 @@ background-color: white;
 }
 
 .recommended .listing-image-sample{
-  width: 220px;
-  height: 200px;
+  width: 180px;
+  height: 160px;
 }
 
 .recommended .listing-image-sample:hover{
