@@ -1,19 +1,36 @@
-<% if current_user %>
-	<%= current_user.name %>
-	<%= current_user.email %>
+<div id="wrapper2">
+    <div id="profile-header">
+        <h2>Managment Profile</h2>
+    </div>
+    <div id="profile-settings-main">
+        <div id="profile-pic">
+            PICTURE GOES HERE
+        </div>
 
-	<%#= image_tag current_user.image %>
+        <div class="text-managment">
+        <% if current_user %>
+        	<p class="management-name"><%= current_user.name%></p>
+        	<p class="management-name"><%= current_user.email%></p>
+        	<%#= image_tag current_user.image %>
+        </div>
 
-<%= link_to "Listing Index",listings_path%>
+        <div id="text-managment">
+            <p class="management-box"><%= link_to "Listing Index",listings_path%></p>
+        </div>
 
-<% if current_user %>
-	<% if current_user.management? %>
-		<%= link_to "Create New Listing",new_listing_path%>
-	<% end %>
-	<div> <%= link_to "Edit Profile", edit_user_path(current_user.id) %> </div>
-<% end %> 
+        <div id="text-managment">
+            <% if current_user %>
+        	<% if current_user.management? %>
+        		<p class="management-box"><%= link_to "Create New Listing",new_listing_path%></p>
+        	<% end %>
+        </div>
 
-	
+        	<div class="management-box"> <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
+        <% end %>
+        </div>
 
-<%= link_to "Make Payment", braintree_new_path %>
-<%end%>
+
+        <!--<%= link_to "Make Payment", braintree_new_path %>-->
+        <%end%>
+    </div>
+</div>
