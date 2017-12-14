@@ -1,0 +1,29 @@
+<div id="wrapper2">
+        <div id="profile-header">
+            <h2>Reservation History</h2>
+        </div>
+    <table class="cinereousTable">
+        <thead>
+          <tr>
+            <th>Property Name</th>
+            <th>Address</th> 
+            <th>Type</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Duration</th>
+            <th>Total Price</th>
+          </tr>
+        </thead>
+          <tr>
+            <% @reservation.each do |r|%>
+            <td><%= r.listing.title%></td>
+            <td><%= r.listing.address%>, <%= r.listing.city%></td>
+            <td><%= r.listing.category%></td>
+            <td><%= r.start_time %></td>
+            <td><%= r.end_time %></td>
+            <td><%= (r.end_time - r.start_time)/3600 %> Hours</td>
+            <td>RM <%= (r.listing.price) * (r.end_time - r.start_time)/3600%></td>
+            <%end%>
+          </tr>
+    </table>
+</div>

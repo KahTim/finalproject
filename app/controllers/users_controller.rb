@@ -25,7 +25,8 @@ class UsersController < Clearance::UsersController
 		end
 	end
 
-	def show 
+	def show
+		@reservation = Reservation.where(user_id: current_user.id) 
 	end 
 
 	private 
