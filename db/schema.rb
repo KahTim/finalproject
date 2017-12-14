@@ -30,10 +30,12 @@ ActiveRecord::Schema.define(version: 20171219073823) do
     t.string "address"
     t.string "city"
     t.string "category"
-    t.integer "price"
+
     t.json "avatar"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_listings_on_user_id"
   end
 
   create_table "managements", force: :cascade do |t|
@@ -81,6 +83,7 @@ ActiveRecord::Schema.define(version: 20171219073823) do
   end
 
   add_foreign_key "authentications", "users"
+  add_foreign_key "listings", "users"
   add_foreign_key "reservations", "listings"
   add_foreign_key "reservations", "users"
 end
