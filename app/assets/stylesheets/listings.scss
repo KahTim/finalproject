@@ -144,12 +144,18 @@ background-color: white;
 
 #reservation-calander h4{
   color: black;
+  text-align: center;
+}
+
+.booking-title{
+  height: 40px;
+  margin-top: 15px;
 }
 
 #reservation-calander{
   display: inline-flex;
-  width: 600px;
-  border: 2px solid black;
+  width: 500px;
+  margin-left: 20px;
 }
 
 
@@ -161,9 +167,10 @@ background-color: white;
 }
 
 #reservation_duration{
-  width: 100px;
+  width: 150px;
   height: 40px;
-  margin-left: 40px;
+  margin-left: 10px;
+  margin-top: 15px;
 }
 
 .recommended{
@@ -224,8 +231,12 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
     width: 60px;
 }
 
+.category{
+  text-align: center;
+}
+
 .category:hover{
-  background-color: rgba(169, 169, 169, .3);
+  background-color: rgba(169, 169, 169, .1);
   border-radius: 10px;
 }
 
