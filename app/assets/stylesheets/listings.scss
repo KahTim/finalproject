@@ -4,6 +4,27 @@
 
 
 // CSS for Listing Show
+
+.wrap-house-rules p, {
+  font-family: 'Numans', sans-serif;
+}
+
+.listing-title2{
+  font-family: 'Numans', sans-serif;
+}
+
+.listing-address2{
+  font-family: 'Numans', sans-serif;
+}
+
+.listing-description{
+  font-family: 'Numans', sans-serif;
+}
+
+.amenity-text{
+  font-family: 'Numans', sans-serif;
+}
+
 .titles{
     background-color: #E0E0E0;
     margin:0px;
@@ -129,7 +150,7 @@ background-color: white;
   background-color: white;
   padding-left: 10px;
   margin-top: 5px;
-  height: 130px;
+  height: 101px;
 }
 
 .wrap-cancellation{
@@ -233,14 +254,19 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
 
 .category{
   text-align: center;
+  height: 100px;
+  width: 130px;
+  border-bottom: 3px solid white;
+}
+
+.category h4{
+  font-weight: bold;
 }
 
 .category:hover{
   background-color: rgba(169, 169, 169, .1);
-  border-radius: 10px;
+  border-bottom: 3px solid #006680;
 }
-
-
 
 #flex-layout-listings{
     margin: 0px;
@@ -285,8 +311,13 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
 .listing-title{
     font-size: 1.5em;
     font-weight: bold;
-
+    font-family: 'Numans', sans-serif;
 }
+
+.listing-city{
+  font-family: 'Numans', sans-serif;
+}
+
 
 @media screen and (max-width: 782px) {
     .flex-container>div {
