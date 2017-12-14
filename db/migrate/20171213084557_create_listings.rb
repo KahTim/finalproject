@@ -4,7 +4,7 @@ class CreateListings < ActiveRecord::Migration[5.1]
     	t.string :title
     	t.string :address
     	t.string :city
-    	t.string :type
+    	t.string :category
     	t.integer :price
     	t.timestamps null:false
     end
