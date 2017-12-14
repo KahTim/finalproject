@@ -3,6 +3,7 @@
 <head>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tag %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => "reload" %>
 </head>
 <body>
 
@@ -33,7 +34,10 @@
       <div id="flash_<%= key %>"><%=h value %></div>
     <% end %>
   </div>
-
+  <div class="d-flex">
+    <div>sdlk</div>
+    <div>sdlfkjw</div>
+  </div>
   <%= yield %>
   <%# unless current_page?(controller: 'home', action: 'index') %>
   <p><%= link_to "Home", home_index_path%></p>
