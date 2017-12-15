@@ -36,6 +36,6 @@ private
 		params.require(:listing).permit(:title,:address,:city,:type,:price)
 	end
 	def filtering_params(params)
-  		params.slice(:city)
+  		params.slice(:city,:category)
 	end
 end

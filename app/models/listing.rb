@@ -4,5 +4,5 @@ class Listing < ApplicationRecord
 	has_many :reservations
 	
 	scope :city, -> (city) { where city: city}
-
+	scope :category, -> (category) { where category: category}
 end
