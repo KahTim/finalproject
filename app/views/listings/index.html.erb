@@ -1,28 +1,27 @@
 
 
 <div class="flex-container">
-    <div class="category"><%= image_tag "badminton.png", {class:"badminton"}%> </div>
-    <div class="category"><%= image_tag "bbq.png", {class:"bbq"}%></div>
-    <div class="category"><%= image_tag "basketball.png", {class:"basketball"}%></div>
-    <div class="category"><%= image_tag "gym.png", {class:"gym"}%></div>
-    <div class="category"><%= image_tag "swim.png", {class:"swim"}%></div>
-    <div class="category"><%= image_tag "tennis.png", {class:"tennis"}%></div>
+    <div class="category"><%=link_to (image_tag "badminton.png", {class:"badminton"}), listings_path(category: 'Badminton' )%> </div>
+    <div class="category"><%=link_to (image_tag "bbq.png", {class:"bbq"}), listings_path(category: 'BBQ' )%> </div>
+    <div class="category"><%=link_to (image_tag "basketball.png", {class:"basketball"}), listings_path(category: 'Basketball' )%> </div>
+    <div class="category"><%=link_to (image_tag "gym.png", {class:"gym"}), listings_path(category: 'GYM' )%> </div>
+    <div class="category"><%=link_to (image_tag "swim.png", {class:"swim"}), listings_path(category: 'Swimming Pool' )%> </div>
+    <div class="category"><%=link_to (image_tag "tennis.png", {class:"tennis"}), listings_path(category: 'Tennis' )%> </div>
 </div>
 
 <div id="flex-layout-listings">
     <% @listings.each do |t| %>
 
     <div class="listing-column">
-        <%=image_tag (t.avatar), :class => "listing-image"%>
+        <%=link_to(image_tag(t.avatar, :class => "listing-image"), t)%>
         <p class="listing-title"><%=t.title%></p>
         <p class="listing-city"><%=t.city%></p>
         <p class="listing-price"><span>Cost per hour: RM</span><%=t.price%></p>
     </div>
- <%end%>
+    <%end%>
 </div>
 
 Listing index
 <% @listings.each do |t| %>
 	<p><%=link_to t.title, t%></p>
 <%end%>
-

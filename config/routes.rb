@@ -12,7 +12,7 @@ Rails.application.routes.draw do
       only: [:create, :edit, :update]
   end
 
-  resources :listings,controller: "listings" do 
+  resources :listings, controller: "listings" do 
     resources :reservations, controller: "reservations"
   end 
 
