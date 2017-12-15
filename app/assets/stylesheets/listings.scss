@@ -24,20 +24,60 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
     border-radius: 5px;
 }
 
-@media screen and (max-width: 720px) {
+
+
+#flex-layout-listings{
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#flex-layout-listings>.listing-column{
+    width: 30%;
+    height: 30vw;
+    text-align: center;
+
+    margin: 7px;
+}
+
+.listing-column{
+    border-radius:16px;
+    background:#E0E0E0;
+}
+
+.listing-column>.listing-image{
+    width:100%;
+    height:70%;
+    margin:0px;
+    padding:0px;
+    line-height: 1px;
+    border-radius: 16px;
+}
+.listing-column p{
+    padding-left:8px;
+    margin: 0px;
+    text-align: left;
+}
+
+.listing-column p .listing-title{
+    font: bold;
+}
+
+@media screen and (max-width: 782px) {
     .flex-container>div {
-        margin: 5px 2vw 5px 2vw;
+        margin: 5px 3.5% 5px 3.5%;
     }
 }
-
-#grid-layout-listings{
-    display: grid;
-    height: 80vh;
+@media screen and (max-width: 782px) {
+    #flex-layout-listings>.listing-column{
+        width: 45%;
+        height: 40vw;
+    }
+.listing-column>.listing-image{
+    height: 80%
 }
-
-
-
-
+}
 
 
 

@@ -9,10 +9,16 @@
     <div class="category"><%= image_tag "tennis.png", {class:"tennis"}%></div>
 </div>
 
-<div id="grid-layout-listings">
-    <div id="a">Ho</div>
-    <div id="b">Li</div>
-    <div id="c">Chow</div>
+<div id="flex-layout-listings">
+    <% @listings.each do |t| %>
+
+    <div class="listing-column">
+        <%=image_tag (t.avatar), :class => "listing-image"%>
+        <p class="listing-title"><%=t.title%></p>
+        <p class="listing-city"><%=t.city%></p>
+        <p class="listing-price"><span>Cost per hour: RM</span><%=t.price%></p>
+    </div>
+ <%end%>
 </div>
 
 Listing index
