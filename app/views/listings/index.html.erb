@@ -1,17 +1,19 @@
 
 
-
-<div id="category_wrap">
-    <div id="category_1">
-        <img src="./imgages/badminto" alt="">
-    </div>
-    <div id="category_2"> <%= image_tag "badminton.png" %> </div>
-    <div id="category_3"><%= image_tag ".png" %></div>
-    <div id="category_4"><%= image_tag "badminton.png" %></div>
-    <div id="category_5"><%= image_tag "badminton.png" %></div>
-    <div id="category_6"><%= image_tag "badminton.png" %></div>
+<div class="flex-container">
+    <div class="category"><%= image_tag "badminton.png", {class:"badminton"}%> </div>
+    <div class="category"><%= image_tag "bbq.png", {class:"bbq"}%></div>
+    <div class="category"><%= image_tag "basketball.png", {class:"basketball"}%></div>
+    <div class="category"><%= image_tag "gym.png", {class:"gym"}%></div>
+    <div class="category"><%= image_tag "swim.png", {class:"swim"}%></div>
+    <div class="category"><%= image_tag "tennis.png", {class:"tennis"}%></div>
 </div>
 
+<div id="grid-layout-listings">
+    <div id="a">Ho</div>
+    <div id="b">Li</div>
+    <div id="c">Chow</div>
+</div>
 
 Listing index
 <% @listings.each do |t| %>

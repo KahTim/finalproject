@@ -2,4 +2,48 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.flex-container{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+
+.flex-container>div{
+margin: 5px 5% 5px 5%;
+}
+
+img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
+    padding: 2px;
+    height: 60px;
+    width: 60px;
+}
+
+.category:hover{
+    background: #eaecef;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 720px) {
+    .flex-container>div {
+        margin: 5px 2vw 5px 2vw;
+    }
+}
+
+#grid-layout-listings{
+    display: grid;
+    height: 80vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
