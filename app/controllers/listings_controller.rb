@@ -40,7 +40,7 @@ private
 	end
 
 	def filtering_params(params)
-  		params.slice(:city)
+  		params.slice(:city,:category)
 	end
 
 end
