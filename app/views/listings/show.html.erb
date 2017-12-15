@@ -1,7 +1,13 @@
-<%= @listing.title%>
-<%= @listing.address%>
-<%= @listing.city%>
-<%= @listing.category%>
-<%= @listing.price%>
-<%= image_tag @listing.avatar%>
-<%= link_to "click here to book", new_listing_reservation_path(@listing.id) %>
+<div id="listing_show_image"><%= image_tag @listing.avatar,{id:'main_image'}%></div>
+<div id="container_box">
+<div id="main_information">
+	<p><%= @listing.title%></p>
+	<p><%= @listing.address%></p>
+	<p><%= @listing.city%></p>
+	<p><%= @listing.category%></p>
+	<p><%= @listing.price%></p>
+</div>
+<div id="reservation_form">
+	<p><%= link_to "click here to book", new_listing_reservation_path(@listing.id) %></p> 
+</div>
+</div>
