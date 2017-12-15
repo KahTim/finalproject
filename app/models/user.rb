@@ -7,7 +7,7 @@ class User < ApplicationRecord
   #mount_uploader :avatar, AvatarUploader #use fb picture
   # has_many :listings, dependent: :destroy
   has_many :reservations
-   
+  enum role: [ :customer, :management ] 
 
   def self.create_with_auth_and_hash(authentication, auth_hash)
     user = self.create!(

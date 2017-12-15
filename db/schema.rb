@@ -36,6 +36,18 @@ ActiveRecord::Schema.define(version: 20171215034049) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "managements", force: :cascade do |t|
+    t.string "name"
+    t.string "manager_name"
+    t.string "address"
+    t.string "city"
+    t.string "property_type"
+    t.string "email"
+    t.string "contact_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "reservations", force: :cascade do |t|
     t.datetime "start_time"
     t.datetime "end_time"
@@ -57,7 +69,7 @@ ActiveRecord::Schema.define(version: 20171215034049) do
     t.string "remember_token", limit: 128, null: false
     t.string "image"
     t.string "name"
-    t.boolean "management", default: false
+    t.integer "role", default: 0
     t.index ["email"], name: "index_users_on_email"
     t.index ["remember_token"], name: "index_users_on_remember_token"
   end
