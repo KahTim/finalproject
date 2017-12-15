@@ -2,6 +2,48 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+// CSS for Listing Show
+#listing_show_image {
+	text-align: center;
+	background-color: green;
+}
+#listing_show_image #main_image{
+	
+}
+#container_box{
+  width: 100%;
+  text-align: center;
+  display: flex; 
+  justify-content: center;
+  background-color: teal;
+}
+#main_information{
+  width: 70%;
+  text-align: left;
+  padding: 12px;
+  background-color: #ddd;
+  border-radius: 3px;
+  vertical-align: top;
+  margin: 5px;
+}
+#reservation_form{
+  width: 30%;
+  text-align: left;
+  padding: 12px;
+  background-color: #ddd;
+  border-radius: 3px;
+  margin: 5px;
+}
+@media screen and (max-width: 600px) 
+{
+  #main_information, #reservation_form
+    {
+       max-width: 100%;
+    }
+}
+
+//CSS for Listing Index
 .flex-container{
     width: 100%;
     display:flex;
@@ -78,12 +120,6 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
     height: 80%
 }
 }
-
-
-
-
-
-
 
 
 
