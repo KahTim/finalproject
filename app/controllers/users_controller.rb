@@ -1,3 +1,5 @@
+require 'byebug'
+
 class UsersController < Clearance::UsersController
 	
 	def edit
@@ -16,17 +18,40 @@ class UsersController < Clearance::UsersController
 
 	def update
 		@user = User.find(current_user.id)
+
+		if @user.customer?
+			
 			if @user.update_attributes(user_params)
 				redirect_to home_index_path
 			else
 				redirect_to edit_user_path(current_user.id)
 			end
+		
+		else
+			# byebug
+			if @user.update_attributes(management_params)
+				redirect_to home_index_path
+			else
+				redirect_to edit_user_path(current_user.id)
+			end
+		
+		end
+
 	end
 
 	private 
 
 	def user_params
 		params.require(:user).permit(:name, :email, :password, :avatar)
+	end
+
+	def management_params
+		if params[:password]
+			params.require(:user).permit(:name, :email, :password, :avatar, :manager_name, :property_type, :contact_number, :address, :city)
+		else
+			params.require(:user).permit(:name, :email, :avatar, :manager_name, :property_type, :contact_number, :address, :city)
+		end
+		# params.delete(:password) unless management_params[:password].present?
 	end
 
 end

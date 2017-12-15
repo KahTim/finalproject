@@ -3,6 +3,40 @@
 <%= form_for @user do |form| %>
 <%= render partial: '/users/form', object: form %> 
 
+<% if current_user.management? %>
+
+<div class="text-field">
+  <%= form.label :property_name %>
+  <%= form.text_field :name %>
+</div>
+
+<div class="text-field">
+  <%= form.label :manager_name %>
+  <%= form.text_field :manager_name %>
+</div>
+
+<div class="text-field">
+  <%= form.label :address %>
+  <%= form.text_field :address %>
+</div>
+
+<div class="text-field">
+  <%= form.label :city %>
+  <%= form.text_field :city %>
+</div>
+
+<div class="text-field">
+  <%= form.label :property_type %>
+  <%= form.text_field :property_type %>
+</div>
+
+<div class="text-field">
+  <%= form.label :contact_number %>
+  <%= form.telephone_field :contact_number %>
+</div>
+
+<% end %>
+
 <div class="submit-field">
   <%= form.submit %>
 </div>
