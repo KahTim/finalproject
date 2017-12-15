@@ -2,4 +2,88 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.flex-container{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+
+.flex-container>div{
+margin: 5px 5% 5px 5%;
+}
+
+img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
+    padding: 2px;
+    height: 60px;
+    width: 60px;
+}
+
+.category:hover{
+    background: #eaecef;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+
+
+#flex-layout-listings{
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#flex-layout-listings>.listing-column{
+    width: 30%;
+    height: 30vw;
+    text-align: center;
+
+    margin: 7px;
+}
+
+.listing-column{
+    border-radius:16px;
+    background:#E0E0E0;
+}
+
+.listing-column>.listing-image{
+    width:100%;
+    height:70%;
+    margin:0px;
+    padding:0px;
+    line-height: 1px;
+    border-radius: 16px;
+}
+.listing-column p{
+    padding-left:8px;
+    margin: 0px;
+    text-align: left;
+}
+
+.listing-column p .listing-title{
+    font: bold;
+}
+
+@media screen and (max-width: 782px) {
+    .flex-container>div {
+        margin: 5px 3.5% 5px 3.5%;
+    }
+}
+@media screen and (max-width: 782px) {
+    #flex-layout-listings>.listing-column{
+        width: 45%;
+        height: 40vw;
+    }
+.listing-column>.listing-image{
+    height: 80%
+}
+}
+
+
+
+
+
+
+
+
 
