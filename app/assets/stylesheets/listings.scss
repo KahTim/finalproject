@@ -4,38 +4,51 @@
 
 
 // CSS for Listing Show
-#listing_show_image {
+#main_image{
+    padding:0px;
+    margin:0px;
+    width:100%;
+    height: auto;
 	text-align: center;
-	background-color: green;
 }
-#listing_show_image #main_image{
-	
-}
+
 #container_box{
+  padding:0px;
+  margin:0px;
   width: 100%;
   text-align: center;
-  display: flex; 
+  display: flex;
   justify-content: center;
-  background-color: teal;
+  background-color: white;
 }
 #main_information{
   width: 70%;
+  padding: 0px;
+  margin: 5px;
   text-align: left;
-  padding: 12px;
-  background-color: #ddd;
+  background-color: #E0E0E0;
   border-radius: 3px;
   vertical-align: top;
-  margin: 5px;
 }
+
+#main_information p{
+    padding-left:5px;
+}
+#main_information p.listing-title2{
+    font: bold;
+    font-size:  1.5em;
+}
+
+
 #reservation_form{
   width: 30%;
   text-align: left;
   padding: 12px;
-  background-color: #ddd;
+  background-color: #E0E0E0;
   border-radius: 3px;
   margin: 5px;
 }
-@media screen and (max-width: 600px) 
+@media screen and (max-width: 600px)
 {
   #main_information, #reservation_form
     {
@@ -96,6 +109,7 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
     line-height: 1px;
     border-radius: 16px;
 }
+
 .listing-column p{
     padding-left:8px;
     margin: 0px;
