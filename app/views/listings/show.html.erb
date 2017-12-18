@@ -3,6 +3,13 @@
 
   <div id="listing-wrapper">
     <div id="reservation_form">
+    <input type="button" class='datepicker' >
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+</script>
       <p>Price per hour: RM<%= @listing.price%></p>
       <p><%= link_to "click here to book", new_listing_reservation_path(@listing.id) %></p>
     </div>
