@@ -33,6 +33,7 @@ class ListingsController < ApplicationController
 	
 	def show
 		@listing = Listing.find(params[:id])
+		@recommended = Listing.where(category: @listing.category)
 	end
 
 private

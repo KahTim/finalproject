@@ -34,12 +34,12 @@
 
       <ul class="nav navbar-nav navbar-right">
        <% if signed_in?%>
-        <%if current_user.image == nil%>
-          <li><%= link_to "Profile Page" ,user_path(current_user.id) %></li>
-        <%else%>
-          <li> <%= link_to (image_tag current_user.image, {class:"profile-pic"}) , user_path(current_user.id) %> </li>
-        <%end%>
-          <li> <%= link_to "sign out", sign_out_path, method: :delete %> </li>
+          <%if current_user.image == nil%>
+            <li><%= link_to "Profile Page" ,user_path(current_user.id) %></li>
+          <%else%>
+            <li> <%= link_to (image_tag current_user.image, {class:"profile-pic"}) , user_path(current_user.id) %> </li>
+          <%end%>
+          <li> <%= button_to "sign out", sign_out_path, method: :delete %> </li>
        <% else %>
           <li><%= link_to "sign in", sign_in_path%></li>
        <% end %>
