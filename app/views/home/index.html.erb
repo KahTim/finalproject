@@ -30,11 +30,14 @@
 	</div>
 
 <%= link_to "Listing Index",listings_path%>
-<% if current_user.management? %>
-	<%= link_to "Create New Listing",new_listing_path%>
-<% end %>
 
+<% if current_user %>
+	<% if current_user.management? %>
+		<%= link_to "Create New Listing",new_listing_path%>
+	<% end %>
 	<div> <%= link_to "Edit Profile", edit_user_path(current_user.id) %> </div>
+<% end %> 
 
+	
 
 <%= link_to "Make Payment", braintree_new_path %>
