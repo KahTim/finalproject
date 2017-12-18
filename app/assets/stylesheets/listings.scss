@@ -4,57 +4,130 @@
 
 
 // CSS for Listing Show
-#main_image{
-    padding:0px;
+.titles{
+    background-color: #E0E0E0;
     margin:0px;
-    width:100%;
-    height: auto;
+    padding-left:10px;
+}
+
+#main_image{
+  padding:0px;
+  margin:0px;
+  width:100%;
+  height: auto;
 	text-align: center;
 }
 
-#container_box{
-  padding:0px;
-  margin:0px;
-  width: 100%;
-  text-align: center;
+#listing-wrapper{
   display: flex;
-  justify-content: center;
-  background-color: white;
 }
+
+#reservation_form{
+    flex:2;
+    height: 500px;
+    margin: 5px;
+    text-align: left;
+    background-color: #E0E0E0;
+    border-radius: 3px;
+}
+
+#listing-wrapper-left-column{
+  flex: 3;
+  height:510px;
+  overflow: auto;
+}
+
 #main_information{
-  width: 70%;
   padding: 0px;
   margin: 5px;
   text-align: left;
   background-color: #E0E0E0;
   border-radius: 3px;
-  vertical-align: top;
 }
 
 #main_information p{
-    padding-left:5px;
+    padding-left:10px;
+    margin: 0px;
+
 }
 #main_information p.listing-title2{
     font: bold;
-    font-size:  1.5em;
+    font-size:  2.5em;
 }
 
+#main_information p.listing-description{
+    line-height: 150%;
+    padding-top: 10px;
+}
 
-#reservation_form{
-  width: 30%;
-  text-align: left;
-  padding: 12px;
+// AMENITY STYLING//////////
+#listing-amenities{
+  background-color:#E0E0E0;
+  display: flex;
+  padding-left:10px;
+}
+#left-amenity-column{
+  flex: 1;
+  padding-left:10px;
+}
+
+#right-amenity-column{
+  flex: 1;
+}
+#amenity div{
+  display:inline-block;
+}
+
+// HOUSE STYLING///////
+#house-rules-flex{
+  display:flex;
   background-color: #E0E0E0;
-  border-radius: 3px;
-  margin: 5px;
+  padding-left:10px;
 }
-@media screen and (max-width: 600px)
-{
-  #main_information, #reservation_form
-    {
-       max-width: 100%;
-    }
+#house-rules-flex h3{
+  display:inline;
 }
+
+.house-rules-left{
+  flex: 1;
+}
+
+.house-rules-right{
+  flex: 1;
+  padding-left:10px;
+}
+
+#cancellation{
+  background-color: #E0E0E0;
+  padding-left: 10px;
+  margin-top: 5px;
+}
+
+@media (max-width:782px){
+  #listing-wrapper-left-column p{
+  font-size: 10px;
+  }
+}
+
+
+// @media screen and (max-width: 600px)
+// {
+//   #main_information, #reservation_form
+//     {
+//        max-width: 100%;
+//     }
+// }
+//&&&&&&&&&&&creates horizontal line &&&&&&&&&&&&&&&&&&&&&&&
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid black;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
 
 //CSS for Listing Index
 .flex-container{

@@ -1,15 +1,71 @@
 <div><%= image_tag @listing.avatar,{id:'main_image'}%></div>
 
-<div id="container_box">
-<div id="main_information">
-	<p class="listing-title2"><%= @listing.title%></p>
-	<p class="listing-address2"><%= @listing.address%></p>
-	<p class="listing-city2"><%= @listing.city%></p>
-	<!-- <p class="listing-category2"><%= @listing.category%></p> -->
-</div>
 
-<div id="reservation_form">
-    <p><%= @listing.price%></p>
-	<p><%= link_to "click here to book", new_listing_reservation_path(@listing.id) %></p>
-</div>
+  <div id="listing-wrapper">
+    <div id="reservation_form">
+      <p>Price per hour: RM<%= @listing.price%></p>
+      <p><%= link_to "click here to book", new_listing_reservation_path(@listing.id) %></p>
+    </div>
+
+
+  <div id="listing-wrapper-left-column">
+    <div id="main_information">
+	   <p class="listing-title2"><%= @listing.title%></p>
+	   <p class="listing-address2"><%= @listing.address%>, <%= @listing.city%></p>
+	<!-- <p class="listing-category2"><%= @listing.category%></p> -->
+<hr>
+      <p class="listing-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non quos debitis placeat ullam totam obcaecati magni excepturi in reiciendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non quos debitis placeat ullam totam obcaecati magni excepturi in reiciendis!</p>
+    </div>
+
+<!-- HTML for fake amenities/data -->
+<hr>
+    <h5 class="titles">Amenities</h5>
+    <div id="listing-amenities">
+      <div id="left-amenity-column">
+
+        <div id="amenity">
+          <div><img src="wifi.png"></div>
+          <div><p>Wireless Internet</p></div>
+        </div>
+        <div id="amenity">
+          <div><img src="/images/bathroom.png"></div>
+          <div><p>Restrooms</p></div>
+        </div>
+      </div>
+
+      <div id="right-amenity-column">
+        <div id="amenity">
+          <div><img src="./images/Elevator.png"></div>
+          <div><p>Elevator</p></div>
+        </div>
+        <div id="amenity">
+          <div><img src="./images/parking.png"></div>
+          <div><p>Street Parking</p></div>
+        </div>
+      </div>
+    </div>
+<hr>
+
+    <h5 class="titles">House Rules</h5>
+    <div id="house-rules-flex">
+      <div class="house-rules-left">
+        <p>Check in at front desk with ID</p>
+        <p>Arrive 15 Minutes Early</p>
+        <p>Bring own equipment</p>
+        <p>HO LI CHOW</p>
+      </div>
+      <div class="house-rules-right">
+        <p>Respect Residents and Members</p>
+        <p>Clean up any mess made</p>
+        <p>Keep noise to a minimum</p>
+        <p>Report any damages to front desk</p>
+      </div>
+    </div>
+
+  <div id="cancellation">
+    <h5>Cancellations</h5>
+    <p>Cancel up to 24 hours before check in and get a full refund (minus service fees) </p>
+    <p>Reschedule up to 12 hours before alotted time</p>
+  </div>
+</div> <!-- </div> Listing wrapper keep dont delete -->
 </div>
