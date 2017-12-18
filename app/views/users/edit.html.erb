@@ -1,48 +1,51 @@
 <div id="wrapper">
-  <h1>Edit Your Profile</h1>
+  <div id="profile-header">
+    <h2>Profile Settings</h>
+  </div>
   <!-- <p><%#= image_tag current_user.image %></p> -->
-  <%= form_for @user do |form| %>
-  <%= render partial: '/users/form', object: form %>
+  <div id="profile-settings-main">
+    <%= form_for @user do |form| %>
+    <%= render partial: '/users/form', object: form %>
 
-  <% if current_user.management? %>
+    <% if current_user.management? %>
 
-  <div class="text-field">
-    <%= form.label :property_name %>
-    <%= form.text_field :name %>
+    <div class="text-field">
+      <%= form.label :property_name %>
+      <%= form.text_field :name %>
+    </div>
+
+    <div class="text-field">
+      <%= form.label :manager_name %>
+      <%= form.text_field :manager_name %>
+    </div>
+
+    <div class="text-field">
+      <%= form.label :address %>
+      <%= form.text_field :address %>
+    </div>
+
+    <div class="text-field">
+      <%= form.label :city %>
+      <%= form.text_field :city %>
+    </div>
+
+    <div class="text-field">
+      <%= form.label :property_type %>
+      <%= form.text_field :property_type %>
+    </div>
+
+    <div class="text-field">
+      <%= form.label :contact_number %>
+      <%= form.telephone_field :contact_number %>
+    </div>
+
+    <% end %>
+
+    <div class="submit-field">
+      <%= form.submit %>
+    </div>
+    <% end %>
   </div>
-
-  <div class="text-field">
-    <%= form.label :manager_name %>
-    <%= form.text_field :manager_name %>
-  </div>
-
-  <div class="text-field">
-    <%= form.label :address %>
-    <%= form.text_field :address %>
-  </div>
-
-  <div class="text-field">
-    <%= form.label :city %>
-    <%= form.text_field :city %>
-  </div>
-
-  <div class="text-field">
-    <%= form.label :property_type %>
-    <%= form.text_field :property_type %>
-  </div>
-
-  <div class="text-field">
-    <%= form.label :contact_number %>
-    <%= form.telephone_field :contact_number %>
-  </div>
-
-  <% end %>
-
-  <div class="submit-field">
-    <%= form.submit %>
-  </div>
-
-  <% end %>
 </div>
 
 <%= link_to "Home", home_index_path%>
