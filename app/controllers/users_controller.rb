@@ -42,7 +42,9 @@ class UsersController < Clearance::UsersController
 	private 
 
 	def user_params
-		if current_user.customer?
+		if current_user == nil
+			params.require(:user).permit(:name, :email, :password, :avatar)
+		elsif current_user.customer?  
 			params.require(:user).permit(:name, :email, :password, :avatar)
 		else
 		 if params[:password]

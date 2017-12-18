@@ -1,5 +1,6 @@
 class Listing < ApplicationRecord
-	mount_uploader :avatar, AvatarUploader
+	mount_uploaders :avatar, AvatarUploader
+	serialize :avatars, JSON
 	has_many :users
 	has_many :reservations
 	
