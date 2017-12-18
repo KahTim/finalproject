@@ -1,21 +1,40 @@
-<% if current_user %>
-	<%= current_user.name %>
-	<%= current_user.email %>
+<div class="main">
 
-	<%#= image_tag current_user.image %>
+	<div class="container-fluid">
+		<div class="buttons">
+			<div class="row">
+				<div class="category col-md-2 col-md-offset-3"><%=link_to (image_tag "badminton.png", {class:"badminton"}), listings_path(category: 'Badminton' )%> </div>
+				<div class="category col-md-2"><%=link_to (image_tag "bbq.png", {class:"bbq"}), listings_path(category: 'BBQ' )%> </div>
+			    <div class="category col-md-2"><%=link_to (image_tag "basketball.png", {class:"basketball"}), listings_path(category: 'Basketball' )%> </div>
+			</div>
+
+			<br>
+
+			<div class="row">
+			    <div class="category col-md-2 col-md-offset-3 "><%=link_to (image_tag "gym.png", {class:"gym"}), listings_path(category: 'GYM' )%> </div>
+			    <div class="category col-md-2"><%=link_to (image_tag "swim.png", {class:"swim"}), listings_path(category: 'Swimming Pool' )%> </div>
+			    <div class="category col-md-2"><%=link_to (image_tag "tennis.png", {class:"tennis"}), listings_path(category: 'Tennis' )%> </div>
+			</div>
+		</div>
+	</div>
+
+</div> 
+	<div class="searchbar">
+
+		<%= form_tag(listings_path, method: :get, class:"search") do %>
+		  <%= select_tag :city, options_from_collection_for_select(Listing.select(:city).distinct.order(:city),"city","city"), class:"search-select-tab" %>
+		  <%= submit_tag 'Search', name: nil, class:"main-search-button" %>
+		  <br>
+		<%end%>
+
+	</div>
+
 <%= link_to "Listing Index",listings_path%>
 <% if current_user.management? %>
 	<%= link_to "Create New Listing",new_listing_path%>
 <% end %>
 
 	<div> <%= link_to "Edit Profile", edit_user_path(current_user.id) %> </div>
-<% end %>
 
-<%= form_tag(listings_path, method: :get) do %>
-  <%= select_tag :city, options_from_collection_for_select(Listing.select(:city).distinct.order(:city),"city","city") %><br>
-  <%= submit_tag 'Search', name: nil %><br>
-<br>
-<%= link_to "Back", root_path %>
-<%end%>
 
 <%= link_to "Make Payment", braintree_new_path %>

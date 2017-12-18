@@ -11,11 +11,9 @@
  * It is generally better to create a new file per style scope.
 
  *
- *= require_tree .
- *= require_self
- *= require bootstrap-datepicker3
  */
-@import "home";
+@import "bootstrap-datepicker3";
+@import "bootstrap";
 @import "listings";
 @import "reservation";
-@import "bootstrap";
+@import "home";
