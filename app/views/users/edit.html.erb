@@ -1,13 +1,34 @@
+<%if current_user.image != nil %>
 <%= image_tag current_user.image %>
+<%end%>
 
 <div id="wrapper">
-  <div id="profile-header">
-    <h2>Profile Settings</h>
-  </div>
-  <!-- <p><%#= image_tag current_user.image %></p> -->
+
+    <div id="profile-header">
+      <h2>Profile Settings</h>
+    </div>
+
   <div id="profile-settings-main">
-    <%= form_for @user do |form| %>
-    <%= render partial: '/users/form', object: form %>
+    <%= form_for @user do |form|%>
+
+    <div class="label-wrap">
+      <div class="text-field">
+        <p>Email: </p>
+      </div>
+      <div class="form">
+        <%= form.text_field :email, type: 'email',:class => 'form-box' %>
+      </div>
+    </div>
+
+    <div class="label-wrap">
+      <div class="text-field">
+        <p>Password:</p>
+      </div>
+      <div class="form">
+        <%= form.password_field :password, :class => 'form-box'%>
+      </div>
+    </div>
+
 
     <% if current_user.management? %>
 
@@ -16,7 +37,7 @@
         <p>Property Name: </p>
       </div>
       <div class="form">
-        <%= form.text_field :name %>
+        <%= form.text_field :name, :class => 'form-box'%>
       </div>
     </div>
 
@@ -25,7 +46,7 @@
         <p>Manger Name: </p>
       </div>
       <div class="form">
-      <%= form.text_field :manager_name %>
+      <%= form.text_field :manager_name, :class => 'form-box' %>
       </div>
     </div>
 
@@ -34,7 +55,7 @@
        <p>Address: </p>
       </div>
       <div class="form">
-      <%= form.text_field :address %>
+      <%= form.text_field :address, :class => 'form-box' %>
       </div>
     </div>
 
@@ -44,7 +65,7 @@
         <p>City: </p>
       </div>
       <div class="form">
-      <%= form.text_field :city %>
+      <%= form.text_field :city, :class => 'form-box' %>
       </div>
     </div>
 
@@ -53,25 +74,24 @@
         <p>Property Type: </p>
       </div>
       <div class="form">
-      <%= form.text_field :property_type %>
+      <%= form.text_field :property_type, :class => 'form-box' %>
+    </div>
     </div>
 
     <div class="label-wrap">
       <div class="text-field">
-        <p>Contact Number: </p>
+        <p>Number: </p>
       </div>
       <div class="form">
-      <%= form.telephone_field :contact_number %>
+      <%= form.telephone_field :contact_number, :class => 'form-box' %>
       </div>
     </div>
 
     <% end %>
-
+  </div>
     <div class="submit-field">
       <%= form.submit %>
     </div>
     <% end %>
-  </div>
-</div>
 
-<%= link_to "Home", home_index_path%>
+</div>
