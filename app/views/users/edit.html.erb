@@ -11,34 +11,58 @@
 
     <% if current_user.management? %>
 
-    <div class="text-field">
-      <%= form.label :property_name %>
-      <%= form.text_field :name %>
+    <div class="label-wrap">
+      <div class="text-field">
+        <p>Property Name: </p>
+      </div>
+      <div class="form">
+        <%= form.text_field :name %>
+      </div>
     </div>
 
-    <div class="text-field">
-      <%= form.label :manager_name %>
+    <div class="label-wrap">
+      <div class="text-field">
+        <p>Manger Name: </p>
+      </div>
+      <div class="form">
       <%= form.text_field :manager_name %>
+      </div>
     </div>
 
-    <div class="text-field">
-      <%= form.label :address %>
+    <div class="label-wrap">
+      <div class="text-field">
+       <p>Address: </p>
+      </div>
+      <div class="form">
       <%= form.text_field :address %>
+      </div>
     </div>
 
-    <div class="text-field">
-      <%= form.label :city %>
+
+    <div class="label-wrap">
+      <div class="text-field">
+        <p>City: </p>
+      </div>
+      <div class="form">
       <%= form.text_field :city %>
+      </div>
     </div>
 
-    <div class="text-field">
-      <%= form.label :property_type %>
+    <div class="label-wrap">
+      <div class="text-field">
+        <p>Property Type: </p>
+      </div>
+      <div class="form">
       <%= form.text_field :property_type %>
     </div>
 
-    <div class="text-field">
-      <%= form.label :contact_number %>
+    <div class="label-wrap">
+      <div class="text-field">
+        <p>Contact Number: </p>
+      </div>
+      <div class="form">
       <%= form.telephone_field :contact_number %>
+      </div>
     </div>
 
     <% end %>
