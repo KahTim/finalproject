@@ -3,29 +3,40 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
 
 .main{
-	background-image: url("background_pic.png");
-	background-size: cover;
-	background-position: center;
-   background-repeat: no-repeat;
+	background-image: url("background.jpeg");
+   background-position: center bottom;
+   width: 100%;
 	height: 720px;
 }
 
 
-.main .category .main-badminton, .main-bbq, .main-basketball, .main-gym, .main-swim, .main-tennis{
-	width: 90px;
-	height: 90px;
-	
+.buttons .category{
+   border-radius: 10px;
+   align-items: center;
+   text-align: center;
+   width:410px;
+   height:410px;   
+   display: inline-flex;
 }
 
-.main .category{
+.buttons .image{
 	border: 2px solid black;
-	align-items: center;
-	text-align: center;
+   width:400px;
+   height:400px;
+   border-radius: 10px;
+
 }
 
 .buttons{
-	margin-top: 10em;
 }
+
+.row1{
+}
+
+.row2{
+   display: inline;
+}
+
 
 .navbar-custom{
 	text-align: center;
