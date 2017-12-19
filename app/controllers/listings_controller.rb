@@ -40,7 +40,7 @@ class ListingsController < ApplicationController
 private
 
 	def params_for_listings
-		params.require(:listing).permit({avatar: []}, :category, :price, :title)
+		params.require(:listing).permit({avatar: []}, :category, :price, :title, :address, :city)
 	end
 
 	def filtering_params(params)

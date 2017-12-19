@@ -16,7 +16,7 @@
         <%if t.avatar[0] == nil %>
             <%=link_to(image_tag("property_default.jpg", :class => "listing-image"), t)%>
         <%else%>
-            <%=link_to(image_tag(t.avatar, :class => "listing-image"), t)%>
+            <%=link_to(image_tag(t.avatar[0], :class => "listing-image"), t)%>
         <%end%>
         <p class="listing-title"><%=t.title%></p>
         <p class="listing-city"><%=t.city%></p>
