@@ -82,7 +82,11 @@
     <h1> Check Out This Other Places! </h1>
     <% @recommended.sample(4).each do |t| %>
       <div class="others col-md-3">
-        <%=link_to(image_tag(t.avatar, :class => "listing-image"), t)%>
+        <%if t.avatar[0] == nil %>
+            <%=link_to(image_tag("property_default.jpg", :class => "listing-image-sample"), t)%>
+        <%else%>
+            <%=link_to(image_tag(t.avatar, :class => "listing-image-sample"), t)%>
+        <%end%>
         <p class="listing-title"><%=t.title%></p>
         <p class="listing-city"><%=t.city%></p>
         <p class="listing-price"><span>Cost per hour: RM</span><%=t.price%></p>
