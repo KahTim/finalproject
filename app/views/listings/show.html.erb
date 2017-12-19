@@ -8,7 +8,7 @@
 
 
 
-    
+
 
 
   <div id="listing-wrapper-left-column">
@@ -21,32 +21,38 @@
     </div>
 
 <!-- HTML for fake amenities/data -->
-    <h5 class="titles">Amenities</h5>
-    <div id="listing-amenities">
-      <div id="left-amenity-column">
+    <div class="wrap-amenities">
 
-        <div id="amenity">
-          <div><%= image_tag "wifi.png"%></div>
-          <div><p>Wireless Internet</p></div>
+      <h5 class="titles">Amenities</h5>
+
+      <div id="listing-amenities">
+
+        <div id="left-amenity-column">
+          <div id="amenity">
+            <div><%= image_tag "wifi.png"%></div>
+            <div><p>Wireless Internet</p></div>
+          </div>
+          <div id="amenity">
+            <div><%= image_tag"bathroom.png"%></div>
+            <div><p>Restrooms</p></div>
+          </div>
         </div>
-        <div id="amenity">
-          <div><%= image_tag"bathroom.png"%></div>
-          <div><p>Restrooms</p></div>
+
+        <div id="right-amenity-column">
+          <div id="amenity">
+            <div><%= image_tag"Elevator.png"%></div>
+            <div><p>Elevator</p></div>
+          </div>
+          <div id="amenity">
+            <div><%= image_tag"parking.png"%></div>
+            <div><p>Street Parking</p></div>
+          </div>
         </div>
+
       </div>
 
-      <div id="right-amenity-column">
-        <div id="amenity">
-          <div><%= image_tag"Elevator.png"%></div>
-          <div><p>Elevator</p></div>
-        </div>
-        <div id="amenity">
-          <div><%= image_tag"parking.png"%></div>
-          <div><p>Street Parking</p></div>
-        </div>
-      </div>
     </div>
-
+  <div class="wrap-house-rules">
     <h5 class="titles">House Rules</h5>
     <div id="house-rules-flex">
       <div class="house-rules-left">
@@ -62,11 +68,13 @@
         <p>Report any damages to front desk</p>
       </div>
     </div>
-
-  <div id="cancellation">
-    <h5>Cancellations</h5>
-    <p>Cancel up to 24 hours before check in and get a full refund (minus service fees) </p>
-    <p>Reschedule up to 12 hours before alotted time</p>
+  </div>
+  <div class="wrap-cancellation">
+    <div id="cancellation">
+      <h5 class="titles">Cancellations</h5>
+      <p>Cancel up to 24 hours before check in and get a full refund (minus service fees) </p>
+      <p>Reschedule up to 12 hours before alotted time</p>
+    </div>
   </div>
 </div> <!-- </div> Listing wrapper keep dont delete -->
 
@@ -85,14 +93,14 @@ xxxxxxxxxxxxxxx BOOKING TITLE HERE xxxxxxxxxxxxxxx
          <%#= form.time_select :end_time, :default => {:hour => '10', :minute => '20'}%>
          <%#= form.time_field :end_time%>
          <%= form.select :duration, options_for_select(Reservation::TIME_OPTIONS) %>
-       </div>  
+       </div>
      </div>
-     
+
      <!-- <div>
        <%#= form.label :end_date %>
        <%#= form.date_field :end_time%>
      </div> -->
-     
+
 
      <div class="submit-field">
        <%= form.submit %>
