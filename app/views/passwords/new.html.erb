@@ -1,16 +1,28 @@
-<div id="clearance" class="password-reset">
-  <h2><%= t(".title") %></h2>
+<div id="wrapper">
 
-  <p><%= t(".description") %></p>
+  <div id="profile-header">
+    <h2>Reset Password</h2>
+  </div>
 
-  <%= form_for :password, url: passwords_path do |form| %>
-    <div class="text-field">
-      <%= form.label :email %>
-      <%= form.text_field :email, type: 'email' %>
+  <div id="profile-settings-main">
+
+    <p><%= t(".description") %></p>
+
+    <%= form_for :password, url: passwords_path do |form| %>
+
+    <div id="label-wrap">
+      <div class="text-field">
+        <p>Email:</p>
+      </div>
+      <div class="form">
+        <%= form.text_field :email, type: 'email', :class => 'form-box' %>
+      </div>
     </div>
 
-    <div class="submit-field">
-      <%= form.submit %>
-    </div>
-  <% end %>
+      <div class="submit-field">
+        <%= form.submit %>
+      </div>
+    <% end %>
+  </div>
+  </div>
 </div>
