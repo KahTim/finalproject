@@ -6,8 +6,10 @@ class ReservationsController < ApplicationController
 	end 
 
 	def create 
+		@listing = Listing.find(params[:listing_id]) 
 		@reservation = current_user.reservations.new(reservation_params)
-		if @reservation.save 
+		if @reservation.save
+			@reservation.update(listing_id: @listing.id)
 			redirect_to root_path
 		else 
 			render new_listing_reservation_path(@listing.id)
