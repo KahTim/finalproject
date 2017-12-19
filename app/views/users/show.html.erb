@@ -30,7 +30,7 @@
 
             <%end%>
             <%if current_user %>
-        <div class="management-box"><%= link_to "sign out", sign_out_path, method: :delete %></div>
+        <div class="management-box"><%= button_to "sign out", sign_out_path, method: :delete %></div>
             <%end%>
     </div>
 </div>

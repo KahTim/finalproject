@@ -11,7 +11,8 @@ class ReservationsController < ApplicationController
 			redirect_to root_path
 		else 
 			render new_listing_reservation_path(@listing.id)
-	end end
+		end 
+	end
 
 	private 
 
