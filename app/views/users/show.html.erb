@@ -8,10 +8,10 @@
         </div>
 
         <div class="text-managment">
-        <% if current_user %>
-        	<p class="management-name"><%= current_user.name%></p>
-        	<p class="management-name"><%= current_user.email%></p>
-        	<%#= image_tag current_user.image %>
+            <% if current_user %>
+            	<p class="management-name"><%= current_user.name%></p>
+            	<p class="management-name"><%= current_user.email%></p>
+            	<%#= image_tag current_user.image %>
         </div>
 
         <div id="text-managment">
@@ -19,18 +19,18 @@
         </div>
 
         <div id="text-managment">
-            <% if current_user %>
-        	<% if current_user.management? %>
-        		<p class="management-box"><%= link_to "Create New Listing",new_listing_path%></p>
-        	<% end %>
+                <% if current_user %>
+            	   <% if current_user.management? %>
+            		  <p class="management-box"><%= link_to "Create New Listing",new_listing_path%></p>
+            	   <% end %>
+        </div>
+        <div class="management-box"> <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
+                <% end %>
         </div>
 
-        	<div class="management-box"> <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
-        <% end %>
-        </div>
-
-
-        <!--<%= link_to "Make Payment", braintree_new_path %>-->
-        <%end%>
+            <%end%>
+            <%if current_user %>
+        <div class="management-box"><%= link_to "sign out", sign_out_path, method: :delete %></div>
+            <%end%>
     </div>
 </div>
