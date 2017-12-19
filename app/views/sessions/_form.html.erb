@@ -1,12 +1,29 @@
-<%= form_for :session, url: session_path do |form| %>
-  <div class="text-field">
-    <%= form.label :email %>
-    <%= form.text_field :email, type: 'email' %>
+
+<div id="wrapper1">
+  <div id="profile-header">
+    <h2>Sign In</h2>
   </div>
 
-  <div class="password-field">
-    <%= form.label :password %>
-    <%= form.password_field :password %>
+<div id="sign-in-settings-main">
+
+<%= form_for :session, url: session_path do |form| %>
+
+  <div class="label-wrap">
+    <div class="text-field">
+      <p>Email:</p>
+    </div>
+    <div class="form">
+      <%= form.text_field :email, type: 'email', :class => 'form-box' %>
+    </div>
+  </div>
+
+  <div id="label-wrap">
+    <div class="text-field">
+      <p>Password</p>
+    </div>
+    <div class="form">
+      <%= form.password_field :password, :class => 'form-box' %>
+    </div>
   </div>
 
   <div class="submit-field">
@@ -21,3 +38,5 @@
   </div>
   <%= link_to "Sign in with Facebook", "/auth/facebook" %>
 <% end %>
+</div>
+</div>
