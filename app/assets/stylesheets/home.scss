@@ -15,7 +15,7 @@
    align-items: center;
    text-align: center;
    width:410px;
-   height:410px;   
+   height:410px;
    display: inline-flex;
 }
 
@@ -31,13 +31,19 @@
 }
 
 .row1{
+   align-text: center;
 }
 
 .row2{
-   display: inline;
+   margin:auto;
+}
+
+.category{
+   margin: auto;
 }
 
 
+// --------NAV BAR___________-//
 .navbar-custom{
 	text-align: center;
 }
