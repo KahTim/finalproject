@@ -214,5 +214,66 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
 }
 }
 
+/// New Listing Page ///
+#wrapper_listings{
+    margin: 20px auto;
+    width: 400px;
+    height: 520px;
+    background-color: #E0E0E0;
+    border-radius: 10px;
+}
 
+#listings-header{
+    background-color: green;
+    border-radius: 10px;
+    height: 100px;
+    text-align: center;
+}
+
+#listings-header h2{
+    line-height: 100px;
+}
+
+#listings-settings-main{
+    padding: 15px;
+}
+
+.label-wrap-listings{
+    height: 50px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.text-field-listings{
+    display: inline-block;
+    width: 105px;
+    padding-left: 7px;
+    height: 50px;
+    line-height: 50px;
+    background-color:#F8F8F8;
+    vertical-align: top;
+    text-align: left;
+}
+
+.form-listings{
+    display:inline-block;
+    height:50px;
+    vertical-align: top;
+}
+
+.form-box-listings{
+    min-width: 200px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #F8F8F8;
+    border: none;
+    padding: 5px 0 0 5px;
+}
+
+.submit-field-listings{
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
 
