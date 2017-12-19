@@ -1,6 +1,6 @@
 class Reservation < ApplicationRecord
   belongs_to :user
-  belongs_to :listings
+  belongs_to :listing
   # after_save :end_time, if: :end_time?
 
   TIME_OPTIONS = [ ["30 mins", 30], ["1 hour", 60] , ["1 hour 30 mins", 90], ["2 hours", 120]]
