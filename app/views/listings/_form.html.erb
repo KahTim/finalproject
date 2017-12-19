@@ -5,9 +5,8 @@
    <div id="listings-settings-main">
 <%= form_for @listing do |form| %>
 
-	<div class="label-wrap-listings">
-	  <%= form.label :avatar %>
-	  <%= form.file_field :avatar, multiple: true %>
+	<div class="label-wrap-listings-upload">
+	  <%= form.file_field :avatar, multiple: true, :class =>'upload-button'%>
 	</div>
 
 	<div class="label-wrap-listings">
@@ -15,7 +14,8 @@
 			<p>Title</p>
 		</div>
 		<div class="form-listings">
-		<%= form.text_field :title, :class => 'form-box-listings' %> 
+		<%= form.text_field :title, :class => 'form-box-listings' %>
+	</div>
 	</div>
 
 	<div class="label-wrap-listings">
@@ -23,36 +23,41 @@
 			<p>Address</p>
 		</div>
 		<div class="form-listings">
-		<%= form.text_field :address, :class => 'form-box-listings' %> 
-	</div>
+		<%= form.text_field :address, :class => 'form-box-listings' %>
+		</div>
+		</div>
 
 	<div class="label-wrap-listings">
 		<div class="text-field-listings">
 			<p>City</p>
 		</div>
 		<div class="form-listings">
-		<%= form.text_field :city, :class => 'form-box-listings' %> 
-	</div>
+		<%= form.text_field :city, :class => 'form-box-listings' %>
+		</div>
+		</div>
 
 	<div class="label-wrap-listings">
 		<div class="text-field-listings">
 			<p>Category</p>
 		</div>
 		<div class="form-listings">
-		<%= form.text_field :category, :class => 'form-box-listings' %> 
-	</div>
-	
+		<%= form.text_field :category, :class => 'form-box-listings' %>
+		</div>
+		</div>
+
 	<div class="label-wrap-listings">
 		<div class="text-field-listings">
 			<p>Price</p>
 		</div>
 		<div class="form-listings">
-		<%= form.text_field :price, :class => 'form-box-listings' %> 
-	</div>
+		<%= form.text_field :price, :class => 'form-box-listings' %>
+		</div>
+		</div>
 
 	<div class="submit-field-listings">
 	  <%= form.submit %>
 	</div>
-	
+
 <% end %>
+</div>
 </div>
