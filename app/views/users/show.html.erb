@@ -38,3 +38,11 @@
         </div>
     </div>
 </div>
+<p>Reservation</p>
+<div>
+    <% @reservation.each do |r|%>
+        <%= r.start_time %>
+        <%= r.end_time %>
+        <%= r.listing.title%>
+    <%end%>
+</div>
