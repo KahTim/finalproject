@@ -16,11 +16,6 @@
 <body>
 <%= render partial: 'layouts/nav'%>
 
-  <div id="flash">
-    <% flash.each do |key, value| -%>
-      <div id="flash_<%= key %>"><%=h value %></div>
-    <% end %>
-  </div>
   <%= yield %>
   <%# unless current_page?(controller: 'home', action: 'index') %>
   <%# end %>

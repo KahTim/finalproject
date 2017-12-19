@@ -4,7 +4,9 @@
     </div>
     <div id="profile-settings-main">
         <div id="profile-pic">
-            PICTURE GOES HERE
+            <% if current_user.image %>
+                <%= image_tag current_user.image, :id => 'profile_picture_size' %>
+            <%end%>
         </div>
 
         <div class="text-managment">
@@ -29,8 +31,10 @@
         </div>
 
             <%end%>
+        <div>
             <%if current_user %>
-        <div class="management-box"><%= link_to "sign out", sign_out_path, method: :delete %></div>
+                <%= button_to "sign out", sign_out_path, method: :delete, :class => 'btn_sign_out' %>
             <%end%>
+        </div>
     </div>
 </div>

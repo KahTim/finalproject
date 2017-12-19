@@ -1,12 +1,43 @@
+<div id="wrapper1">
+	  <div id="profile-header">
+	    <h2>Sign Up</h2>
+	  </div>
 
-<div class="form">
-  <%= form.text_field :email, type: 'email',:class => 'form-box' %>
-</div>
+	<div id="sign-in-settings-main">
+		<%= form_for @user do |form| %>
+		  <div class="label-wrap">
+		    <div class="text-field">
+		      <p>Name:</p>
+		    </div>
+		    <div class="form">
+		      <%= form.text_field :name, type: 'name', :class => 'form-box' %>
+		    </div>
+		  </div>
 
-<div class="password-field">
-  <%= form.label :password, class:"password" %>
-  <%= form.password_field :password %>
+		  <div class="label-wrap">
+		    <div class="text-field">
+		      <p>Email:</p>
+		    </div>
+		    <div class="form">
+		      <%= form.text_field :email, type: 'email', :class => 'form-box' %>
+		    </div>
+		  </div>
 
-<div class="form">
-  <%= form.password_field :password, :class => 'form-box'%>
+		  <div id="label-wrap">
+		    <div class="text-field">
+		      <p>Password</p>
+		    </div>
+		    <div class="form">
+		      <%= form.password_field :password, :class => 'form-box' %>
+		    </div>
+  		   </div>
+
+  		   <div class="submit-field">
+    			<%= form.submit %>
+  		   </div>
+		<%end%>
+		<%= link_to t(".sign_in"), sign_in_path %>
+
+      <%= link_to "Sign up with Facebook", "/auth/facebook" %>
+ 	</div> 
 </div>
