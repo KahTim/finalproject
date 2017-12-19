@@ -4,12 +4,12 @@
   <lu class="navbar-right">
        <% if signed_in?%>
           <%if current_user.image == nil%>
-            <%= link_to "Profile Page" ,user_path(current_user.id) %>
+            <li><%= link_to (image_tag 'profile_picture', {class:"profile-pic"}) ,user_path(current_user.id) %></li>
           <%else%>
             <li><%= link_to (image_tag current_user.image, {class:"profile-pic"}) , user_path(current_user.id) %> </li>
           <%end%>
        <% else %>
-          <%= link_to "sign in", sign_in_path%>
+          <li><%= link_to "sign in", sign_in_path, {class:"sign_in_button"}%></li>
        <% end %>
       </lu>
 </ul>
