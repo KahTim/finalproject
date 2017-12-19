@@ -1,7 +1,7 @@
 #wrapper{
     margin: 20px auto;
     width: 400px;
-    height: 600px;
+    height: 620px;
     background-color: #E0E0E0;
     border-radius: 10px;
 }
@@ -91,5 +91,48 @@
     height: 400px;
     background-color: #E0E0E0;
     border-radius: 10px;
+}
+///------------Management Profile--------//
+#wrapper2{
+    margin: 20px auto;
+    width: 400px;
+    height: 520px;
+    background-color: #E0E0E0;
+    border-radius: 10px;
+}
+
+#profile-pic{
+    width:120px;
+    height:150px;
+    margin:auto;
+    background-color: teal;
+
+}
+
+#text-managment{
+    text-decoration: none;
+}
+
+.management-name{
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.management-box{
+    margin: 0 auto 10px;
+    padding: 10px 0 10px;
+    width:75%;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.management-box a{
+        text-decoration: none;
+        color: black;
+}
+
+.management-box:hover{
+    background-color: orange;
 }
 
