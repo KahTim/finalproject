@@ -18,6 +18,25 @@
 }
 
 #profile-settings-main{
+    padding: 15px;
+}
+
+
+.user-sign-up{
+    margin: auto;
+    border: 2px solid black;
+    width: 300px
+}
+
+.user-sign-up h2{
+    border-bottom: 2px solid black;
+
+}
+
+.user-sign-in{
+    margin: auto;
+    border: 2px solid black;
+    width: 300px;
     text-align: center;
     padding-top: 10px;
 }
@@ -25,7 +44,7 @@
 .label-wrap{
     height: 50px;
     margin-bottom: 5px;
-    radius: 10px;
+    border-radius: 10px;
 }
 
 .text-field{
@@ -58,6 +77,7 @@
     text-align: center;
     border-radius: 5px;
 }
+
 // ___________SIGN IN CSS _________________
 
 #sign-in-settings-main{
@@ -72,14 +92,4 @@
     background-color: #E0E0E0;
     border-radius: 10px;
 }
-
-
-
-
-
-
-
-
-
-
 
