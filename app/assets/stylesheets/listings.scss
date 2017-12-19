@@ -196,7 +196,7 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #056571;
+    background-color: #006680;
 }
 
 #flex-layout-listings>.listing-column{
@@ -255,16 +255,20 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
 }
 
 /// New Listing Page ///
+#wrapper-new-listings{
+background-color: #006680;
+}
+
 #wrapper_listings{
-    margin: 20px auto;
+    margin: 0 auto 0;
     width: 400px;
     height: 520px;
-    background-color: #ccdfcb;
+    background-color: white;
     border-radius: 10px;
 }
 
 #listings-header{
-    background-color: green;
+    background-color: black;
     border-radius: 10px;
     height: 100px;
     text-align: center;
@@ -272,11 +276,13 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
 
 #listings-header h2{
     line-height: 100px;
+    color: white;
 }
 
 #listings-settings-main{
     text-align: center;
     padding: 15px;
+    background-color: white;
 }
 
 .upload-button{
@@ -329,4 +335,14 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
     text-align: center;
     border-radius: 10px;
 }
+// ----------REservation form-----------//
+
+
+
+
+
+
+
+
+
 
