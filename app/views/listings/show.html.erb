@@ -5,17 +5,10 @@
 
 
   <div id="listing-wrapper">
-    <div id="reservation_form">
-    <input type="button" class='datepicker' >
 
-<script type="text/javascript">
-  $(document).ready(function(){
-    $('.datepicker').datepicker();
-  });
-</script>
-      <p>Price per hour: RM<%= @listing.price%></p>
-      <p><%= link_to "click here to book", new_listing_reservation_path(@listing.id) %></p>
-    </div>
+
+
+    
 
 
   <div id="listing-wrapper-left-column">
@@ -76,6 +69,47 @@
     <p>Reschedule up to 12 hours before alotted time</p>
   </div>
 </div> <!-- </div> Listing wrapper keep dont delete -->
+
+   <div id="reservation_form">
+   <!-- <input type="button" class='datepicker' > -->
+xxxxxxxxxxxxxxx BOOKING TITLE HERE xxxxxxxxxxxxxxx
+   <%= form_for [@listing, @reservation] do |form| %>
+
+     <div>
+       <!-- <%#= form.label :start_date %> -->
+       <%= form.text_field :start_time, id: "datetimepicker" %>
+   <!--    <%#= form.date_select :start_date, selected: Date.today, min: 1.days.ago, max: 1.year.from_now %> -->
+
+       <div>
+         xxxxxxxxxxxxxxx DURATION xxxxxxxxxxxxxxx
+         <%#= form.time_select :end_time, :default => {:hour => '10', :minute => '20'}%>
+         <%#= form.time_field :end_time%>
+         <%= form.select :duration, options_for_select(Reservation::TIME_OPTIONS) %>
+       </div>  
+     </div>
+     
+     <!-- <div>
+       <%#= form.label :end_date %>
+       <%#= form.date_field :end_time%>
+     </div> -->
+     
+
+     <div class="submit-field">
+       <%= form.submit %>
+     </div>
+   <% end %>
+
+   <script type="text/javascript">
+     $(document).ready(function(){
+       //$('.datepicker').datepicker();
+       jQuery('#datetimepicker').datetimepicker({
+         inline: true
+       });
+     });
+   </script>
+     <p>Price per hour: RM<%= @listing.price%></p>
+     <p><%= link_to "click here to book", new_listing_reservation_path(@listing.id) %></p>
+   </div>
 </div>
 
 <div class="recommended">
