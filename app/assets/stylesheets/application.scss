@@ -25,7 +25,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    height: 70px;
+    height: 80px;
     overflow: hidden;
     background-color: black;
 }
@@ -42,12 +42,12 @@ li a {
     text-decoration: none;
 }
 
-li a:hover:not(.active) {
+li a:hover:not(.active_home) {
     background-color: #111;
 }
 
-.active {
-    background-color: black;
+.active_home {
+    background-color: white;
 }
 .profile-pic{
 	width: 30px;
