@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   include Clearance::User
-
+  has_many :listings
   # include Clearance::User
 
   validates :password, presence: true, if: :should_validate?
