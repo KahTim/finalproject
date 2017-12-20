@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20171219073823) do
     t.string "address"
     t.string "city"
     t.string "category"
-    t.integer "price"
+
     t.json "avatar"
     t.bigint "user_id"
     t.datetime "created_at", null: false

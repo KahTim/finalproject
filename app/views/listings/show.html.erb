@@ -10,9 +10,11 @@
 	   <p class="listing-title2"><%= @listing.title%></p>
 	   <p class="listing-address2"><%= @listing.address%>, <%= @listing.city%></p>
 	<!-- <p class="listing-category2"><%= @listing.category%></p> -->
-      <hr>
-      <p class="listing-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non quos debitis placeat ullam totam obcaecati magni excepturi in reiciendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non quos debitis placeat ullam totam obcaecati magni excepturi in reiciendis!</p>
-    </div>
+<hr>
+    <p class="listing-description">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non quos debitis placeat ullam totam obcaecati magni excepturi in reiciendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non quos debitis placeat ullam totam obcaecati magni excepturi in reiciendis!
+    </p>
+  </div>
 
 <!-- HTML for fake amenities/data -->
     <div class="wrap-amenities">
@@ -72,27 +74,17 @@
 
    <div id="reservation_form">
    <!-- <input type="button" class='datepicker' > -->
-Choose Your Date and Time to Reserve Our Facility
-   <%= form_for [@listing, @reservation] do |form| %>
+    <h2> Book Now!</h2>
+    <%= form_for [@listing, @reservation] do |form| %>
 
-     <div>
-       <!-- <%#= form.label :start_date %> -->
+     <div id="reservation-calander">
        <%= form.text_field :start_time, id: "datetimepicker" %>
-   <!--    <%#= form.date_select :start_date, selected: Date.today, min: 1.days.ago, max: 1.year.from_now %> -->
-
        <div>
-         Reserve Duration
-         <%#= form.time_select :end_time, :default => {:hour => '10', :minute => '20'}%>
-         <%#= form.time_field :end_time%>
+        <h3> Duration of booking </h3>  
+         <br>
          <%= form.select :duration, options_for_select(Reservation::TIME_OPTIONS) %>
        </div>
      </div>
-
-     <!-- <div>
-       <%#= form.label :end_date %>
-       <%#= form.date_field :end_time%>
-     </div> -->
-
 
      <div class="submit-field">
        <%= form.submit %>
@@ -101,7 +93,6 @@ Choose Your Date and Time to Reserve Our Facility
 
    <script type="text/javascript">
      $(document).ready(function(){
-       //$('.datepicker').datepicker();
        jQuery('#datetimepicker').datetimepicker({
          inline: true
        });

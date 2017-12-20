@@ -14,7 +14,7 @@
   padding:0px;
   margin:0px;
   width:100%;
-  height: 300px;
+  height: 55em;
 	text-align: center;
 }
 
@@ -26,7 +26,7 @@
 
 #reservation_form{
     flex:2;
-    height: 500px;
+    height: 600px;
     margin: 5px;
     text-align: left;
     background-color: white;
@@ -36,8 +36,7 @@
 
 #listing-wrapper-left-column{
   flex: 3;
-  height:510px;
-  overflow: auto;
+  height:600px;
 }
 
 #main_information{
@@ -54,13 +53,17 @@
 
 }
 #main_information p.listing-title2{
-    font: bold;
+    font-weight: bold;
     font-size:  2.5em;
 }
 
 #main_information p.listing-description{
     line-height: 150%;
     padding-top: 10px;
+}
+
+#reservation-calendar{
+  border: 2px solid black
 }
 
 
@@ -121,6 +124,8 @@
 #cancellation{
   background-color: white;
   padding-left: 10px;
+  margin-top: 5px;
+  height: 130px;
 }
 
 .wrap-cancellation{
@@ -134,9 +139,17 @@
 }
 
 .recommended{
-   text-align: center;
+  text-align: center;
 }
 
+.recommended .listing-image-sample{
+  width: 220px;
+  height: 200px;
+}
+
+.recommended .listing-image-sample:hover{
+  opacity: .7;
+}
 
 @media (max-width:782px){
   #listing-wrapper-left-column p{
@@ -169,8 +182,8 @@ hr {
     width: 100%;
     display:flex;
     justify-content: center;
-    background-color: #006680;
-    padding: 17px 0 17px 0;
+    background-color: #A9A9A9;
+    padding: 12px 0 12px 0;
 }
 
 .flex-container>div{
@@ -181,7 +194,7 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
     padding: 2px;
     height: 60px;
     width: 60px;
-    background-color: #006680;
+    background-color: #A9A9A9;
 }
 
 .category:hover{
@@ -228,8 +241,10 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
     text-align: left;
 }
 
-.listing-column p .listing-title{
-    font: bold;
+.listing-title{
+    font-size: 1.5em;
+    font-weight: bold;
+
 }
 
 @media screen and (max-width: 782px) {
