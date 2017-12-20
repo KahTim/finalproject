@@ -4,13 +4,7 @@
  <div> <%=image_tag "apartment1.jpeg",{id:"main_image"} %> </div>
 
 
-  <div id="listing-wrapper">
-
-
-
-
-
-
+<div id="listing-wrapper">
   <div id="listing-wrapper-left-column">
     <div id="main_information">
 	   <p class="listing-title2"><%= @listing.title%></p>
@@ -50,9 +44,7 @@
             <div><p>Street Parking</p></div>
           </div>
         </div>
-
       </div>
-
     </div>
   <div class="wrap-house-rules">
     <h5 class="titles">House Rules</h5>
@@ -81,6 +73,7 @@
 </div> <!-- </div> Listing wrapper keep dont delete -->
 
    <div id="reservation_form">
+   <!-- <input type="button" class='datepicker' > -->
     <h2> Book Now!</h2>
     <%= form_for [@listing, @reservation] do |form| %>
 
@@ -106,7 +99,7 @@
      });
    </script>
      <p>Price per hour: RM<%= @listing.price%></p>
-     <p><%= link_to "click here to book", new_listing_reservation_path(@listing.id) %></p>
+     <!-- <p><%= link_to "click here to book", new_listing_reservation_path(@listing.id) %></p> -->
    </div>
 </div>
 
