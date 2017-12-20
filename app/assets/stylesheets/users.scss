@@ -1,5 +1,5 @@
 #profile-super-wrapper{
-  background-image: url("city-1.jpg");
+  background-image: url("https://s3-ap-southeast-1.amazonaws.com/tether-next/tether-next/city-1.jpg");
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -108,7 +108,7 @@
 ///------------Management Profile--------//
 #super_wrap{
   display: flex;
-  background-image: url("city-2.jpg");
+  background-image: url("https://s3-ap-southeast-1.amazonaws.com/tether-next/tether-next/city-2.jpg");
   width: 100%;
   height: 95vh;
   background-size: cover;
@@ -142,17 +142,17 @@
 #management-profile-header h2{
   margin: 0px;
   line-height: 100px;
-  color: #e9e9e9
+  color: #e9e9e9;
 }
 
 #profile-pic{
-    width:120px;
+    width:200px;
     height:150px;
     margin:auto;
     background-color: teal;
 }
 #profile_picture_size{
-    width: 120px;
+    width: 200px;
     height: 150px;
 }
 

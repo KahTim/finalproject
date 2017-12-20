@@ -1,12 +1,37 @@
-
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Numans" rel="stylesheet">
+</head>
 
 <div class="flex-container">
-    <div class="category"><%=link_to (image_tag "badminton.png", {class:"badminton"}), listings_path(category: 'Badminton' )%> </div>
-    <div class="category"><%=link_to (image_tag "bbq.png", {class:"bbq"}), listings_path(category: 'BBQ' )%> </div>
-    <div class="category"><%=link_to (image_tag "basketball.png", {class:"basketball"}), listings_path(category: 'Basketball' )%> </div>
-    <div class="category"><%=link_to (image_tag "gym.png", {class:"gym"}), listings_path(category: 'GYM' )%> </div>
-    <div class="category"><%=link_to (image_tag "swim.png", {class:"swim"}), listings_path(category: 'Swimming Pool' )%> </div>
-    <div class="category"><%=link_to (image_tag "tennis.png", {class:"tennis"}), listings_path(category: 'Tennis' )%> </div>
+    <div class="category">
+        <%=link_to (image_tag "badminton.png", {class:"badminton"}), listings_path(category: 'Badminton' )%> 
+        <h4> Badminton </h4>
+    </div>
+
+    <div class="category">
+        <%=link_to (image_tag "bbq.png", {class:"bbq"}), listings_path(category: 'BBQ' )%>
+        <h4> BBQ </h4>
+    </div>
+
+    <div class="category">
+        <%=link_to (image_tag "basketball.png", {class:"basketball"}), listings_path(category: 'Basketball' )%> 
+       <h4> Basketball </h4>
+    </div>
+
+    <div class="category">
+        <%=link_to (image_tag "gym.png", {class:"gym"}), listings_path(category: 'GYM' )%>
+        <h4> Gym </h4>
+    </div>
+
+    <div class="category">
+        <%=link_to (image_tag "swim.png", {class:"swim"}), listings_path(category: 'Swimming Pool' )%>
+        <h4> Pools </h4>
+    </div>
+
+    <div class="category">
+        <%=link_to (image_tag "tennis.png", {class:"tennis"}), listings_path(category: 'Tennis' )%> 
+        <h4> Tennis </h4>
+    </div>
 </div>
 
 <div id="flex-layout-listings">

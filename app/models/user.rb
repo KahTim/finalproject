@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   include Clearance::User
-  has_many :listings
+  has_many :listings, dependent: :destroy
+  has_many :reservations, dependent: :destroy
   # include Clearance::User
 
   validates :password, presence: true, if: :should_validate?
@@ -12,7 +13,6 @@ class User < ApplicationRecord
   has_many :authentications, dependent: :destroy
   #mount_uploader :avatar, AvatarUploader #use fb picture
   # has_many :listings, dependent: :destroy
-  has_many :reservations
   enum role: [ :customer, :management ] 
 
   def self.create_with_auth_and_hash(authentication, auth_hash)

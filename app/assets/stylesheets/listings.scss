@@ -4,10 +4,36 @@
 
 
 // CSS for Listing Show
+
+.wrap-house-rules p, {
+  font-family: 'Numans', sans-serif;
+}
+
+.listing-title2{
+  font-family: 'Numans', sans-serif;
+}
+
+.listing-address2{
+  font-family: 'Numans', sans-serif;
+}
+
+.listing-description{
+  font-family: 'Numans', sans-serif;
+}
+
+.amenity-text{
+  font-family: 'Numans', sans-serif;
+}
+
+.wrap-cancellation{
+  font-family: 'Numans', sans-serif;
+}
+
 .titles{
     background-color: #E0E0E0;
     margin:0px;
     padding-left:10px;
+    font-size: 1.5em;
 }
 
 #main_image{
@@ -38,6 +64,7 @@
 #listing-wrapper-left-column{
   flex: 3;
   height:600px;
+  overflow: auto;
 }
 
 #main_information{
@@ -67,6 +94,10 @@
   border: 2px solid black
 }
 
+.price-per-hour{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2em;
+}
 
 
 // AMENITY STYLING//////////
@@ -128,8 +159,7 @@ background-color: white;
 #cancellation{
   background-color: white;
   padding-left: 10px;
-  margin-top: 5px;
-  height: 130px;
+  height: 101px;
 }
 
 .wrap-cancellation{
@@ -144,12 +174,18 @@ background-color: white;
 
 #reservation-calander h4{
   color: black;
+  text-align: center;
+}
+
+.booking-title{
+  height: 40px;
+  margin-top: 15px;
 }
 
 #reservation-calander{
   display: inline-flex;
-  width: 600px;
-  border: 2px solid black;
+  width: 500px;
+  margin-left: 20px;
 }
 
 
@@ -161,8 +197,10 @@ background-color: white;
 }
 
 #reservation_duration{
-  width: 100px;
+  width: 150px;
   height: 40px;
+  margin-left: 10px;
+  margin-top: 15px;
 }
 
 .recommended{
@@ -223,12 +261,21 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
     width: 60px;
 }
 
-.category:hover{
-  background-color: rgba(169, 169, 169, .3);
-  border-radius: 10px;
+.category{
+  text-align: center;
+  height: 100px;
+  width: 130px;
+  border-bottom: 3px solid white;
 }
 
+.category h4{
+  font-weight: bold;
+}
 
+.category:hover{
+  background-color: rgba(169, 169, 169, .1);
+  border-bottom: 3px solid #006680;
+}
 
 #flex-layout-listings{
     margin: 0px;
@@ -236,6 +283,7 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
     flex-wrap: wrap;
     justify-content: center;
     background-color: #006680;
+    height: 720px;
 }
 
 #flex-layout-listings>.listing-column{
@@ -273,8 +321,13 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
 .listing-title{
     font-size: 2.2em;
     font-weight: bold;
-
+    font-family: 'Numans', sans-serif;
 }
+
+.listing-city{
+  font-family: 'Numans', sans-serif;
+}
+
 
 .listing-city{
     font-size: 2em;
@@ -287,6 +340,7 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
     /*font-weight: bold;*/
 
 }
+
 
 @media screen and (max-width: 782px) {
     .flex-container>div {
@@ -313,7 +367,7 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
 
 /// New Listing Page ///
 #wrapper-new-listings{
-  background-image: url("city-3.jpg");
+  background-image: url("https://s3-ap-southeast-1.amazonaws.com/tether-next/tether-next/city-3.jpg");
   width: 100%;
   height: 100vh;
   background-size: cover;
