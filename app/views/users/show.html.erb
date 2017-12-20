@@ -1,12 +1,14 @@
 <div id="super_wrap">
     <div id="wrapper2">
-        <div id="profile-header">
+        <div id="management-profile-header">
             <h2>Managment Profile</h2>
         </div>
         <div id="profile-settings-main">
             <div id="profile-pic">
-                <% if current_user.image %>
-                    <%= image_tag current_user.image, :id => 'profile_picture_size' %>
+                <% if current_user.image == nil %>
+                    <%= image_tag "profile_picture.png", :id => 'profile_picture_size' %>
+                <%else%>
+                     <%= image_tag current_user.image, :id => 'profile_picture_size' %>    
                 <%end%>
             </div>
 
@@ -17,9 +19,16 @@
                 	<%#= image_tag current_user.image %>
             </div>
 
+               
             <div id="text-managment">
-                <p class="management-box"><%= link_to "Listing Index",listings_path%></p>
+                <% if current_user.customer? %>
+                    <p class="management-box"><%= link_to "Listing Index",listings_path%></p>
+                <% else %>
+                    <p class="management-box"><%= link_to "My Listings",listing_management_property_path%></p>
+                <% end %>
             </div>
+
+
 
             <div id="text-managment">
                     <% if current_user %>

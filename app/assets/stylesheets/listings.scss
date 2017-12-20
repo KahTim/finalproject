@@ -20,6 +20,8 @@
 
 #listing-wrapper{
   display: flex;
+  background-color: #006680;
+  padding: 5px;
 }
 
 #reservation_form{
@@ -27,8 +29,8 @@
     height: 600px;
     margin: 5px;
     text-align: left;
-    background-color: #E0E0E0;
-    border-radius: 3px;
+    background-color: white;
+    border-radius: 5px;
 }
 
 #listing-wrapper-left-column{
@@ -40,8 +42,8 @@
   padding: 0px;
   margin: 5px;
   text-align: left;
-  background-color: #E0E0E0;
-  border-radius: 3px;
+  background-color: white;
+  border-radius: 5px;
 }
 
 #main_information p{
@@ -50,7 +52,7 @@
 
 }
 #main_information p.listing-title2{
-    font: bold;
+    font-weight: bold;
     font-size:  2.5em;
 }
 
@@ -65,14 +67,25 @@
 
 
 // AMENITY STYLING//////////
+.wrap-amenities{
+  border: 1px solid white;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+
+
+
 #listing-amenities{
-  background-color:#E0E0E0;
+  background-color: white;
   display: flex;
   padding-left:10px;
 }
+
 #left-amenity-column{
   flex: 1;
   padding-left:10px;
+  border-radius: 5px;
 }
 
 #right-amenity-column{
@@ -83,9 +96,15 @@
 }
 
 // HOUSE STYLING///////
+.wrap-house-rules{
+  border: 1px solid white;
+  border-radius: 5px;
+  margin: 5px;
+}
+
 #house-rules-flex{
   display:flex;
-  background-color: #E0E0E0;
+  background-color: white;
   padding-left:10px;
 }
 #house-rules-flex h3{
@@ -102,15 +121,20 @@
 }
 
 #cancellation{
-  background-color: #E0E0E0;
+  background-color: white;
   padding-left: 10px;
   margin-top: 5px;
   height: 130px;
 }
 
-.submit-button{
-  border: none;
-  color: orange;
+.wrap-cancellation{
+  border: 1px solid white;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+#cancellation p{
+  margin: 0;
 }
 
 .recommended{
@@ -157,7 +181,8 @@ hr {
     width: 100%;
     display:flex;
     justify-content: center;
-    background-color: #ccdfcb;
+    background-color: #A9A9A9;
+    padding: 12px 0 12px 0;
 }
 
 .flex-container>div{
@@ -168,10 +193,11 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
     padding: 2px;
     height: 60px;
     width: 60px;
+    background-color: #A9A9A9;
 }
 
 .category:hover{
-    background: #ccdfcb;
+    background-color: #ccdfcb;
     border: 2px solid black;
     border-radius: 5px;
 }
@@ -183,7 +209,7 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #056571;
+    background-color: #006680;
 }
 
 #flex-layout-listings>.listing-column{
@@ -196,7 +222,7 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
 
 .listing-column{
     border-radius:16px;
-    background:#ff6a5c;
+    background:white;
 }
 
 .listing-image{
@@ -214,8 +240,10 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
     text-align: left;
 }
 
-.listing-column p .listing-title{
-    font: bold;
+.listing-title{
+    font-size: 1.5em;
+    font-weight: bold;
+
 }
 
 @media screen and (max-width: 782px) {
@@ -242,16 +270,20 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
 }
 
 /// New Listing Page ///
+#wrapper-new-listings{
+background-color: #006680;
+}
+
 #wrapper_listings{
-    margin: 20px auto;
+    margin: 0 auto 0;
     width: 400px;
     height: 520px;
-    background-color: #ccdfcb;
+    background-color: white;
     border-radius: 10px;
 }
 
 #listings-header{
-    background-color: green;
+    background-color: black;
     border-radius: 10px;
     height: 100px;
     text-align: center;
@@ -259,11 +291,13 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
 
 #listings-header h2{
     line-height: 100px;
+    color: white;
 }
 
 #listings-settings-main{
     text-align: center;
     padding: 15px;
+    background-color: white;
 }
 
 .upload-button{
@@ -316,4 +350,14 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
     text-align: center;
     border-radius: 10px;
 }
+// ----------REservation form-----------//
+
+
+
+
+
+
+
+
+
 

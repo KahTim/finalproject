@@ -103,7 +103,7 @@ zoom:1;
 /*-------------------------------------*/
 
 .container-fluid{
-   background-color: #e9e9e9;
+   background-color: #006680;
    padding: 0px;
 }
 
@@ -189,10 +189,12 @@ text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
 .form-wrapper-2 .button:hover{
 background: #FA8807;
 }
+
 .form-wrapper-2 .button:active,
 .form-wrapper-2 .button:focus{
 background: #c42f2f;
 }
+
 .form-wrapper-2 .button:before {
 content: '';
 position: absolute;

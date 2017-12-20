@@ -12,7 +12,7 @@ class ListingsController < ApplicationController
 	end
 	
 	def create
-		@listing = Listing.new(params_for_listings)
+		@listing = current_user.listings.new(params_for_listings)
 
 		if @listing.save
 			redirect_to root_url
@@ -37,10 +37,15 @@ class ListingsController < ApplicationController
 		@reservation = Reservation.new
 	end
 
+	def management_property
+		@listings = current_user.listings
+		# byebug
+	end
+
 private
 
 	def params_for_listings
-		params.require(:listing).permit({avatar: []}, :category, :price)
+		params.require(:listing).permit({avatar: []}, :category, :price, :title, :address, :city)
 	end
 
 	def filtering_params(params)
