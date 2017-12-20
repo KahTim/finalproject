@@ -1,3 +1,7 @@
+<head>
+   <link href="https://fonts.googleapis.com/css?family=Numans" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+</head>
 <!-- <div><%= image_tag @listing.avatar,{id:'main_image'}%></div>
  --><!--uncomment to use the listing avatar-->
 
@@ -13,43 +17,41 @@
 <hr>
     <p class="listing-description">
       One of the best condominiums in town! Walking distance from some of busiest the commercial areas around.
-
-      
     </p>
   </div>
 
 <!-- HTML for fake amenities/data -->
     <div class="wrap-amenities">
 
-      <h5 class="titles">Amenities</h5>
+      <h5 class="titles"><b>Amenities</b></h5>
 
       <div id="listing-amenities">
 
         <div id="left-amenity-column">
           <div id="amenity">
             <div><%= image_tag "wifi.png", {class:"small-image"}%></div>
-            <div><p>Wireless Internet</p></div>
+            <div class="aminity-text"><p>Wireless Internet</p></div>
           </div>
           <div id="amenity">
             <div><%= image_tag"bathroom.png", {class:"small-image"}%></div>
-            <div><p>Restrooms</p></div>
+            <div class="aminity-text"><p>Restrooms</p></div>
           </div>
         </div>
 
         <div id="right-amenity-column">
           <div id="amenity">
             <div><%= image_tag"Elevator.png", {class:"small-image"}%></div>
-            <div><p>Elevator</p></div>
+            <div class="aminity-text"><p>Elevator</p></div>
           </div>
           <div id="amenity">
             <div><%= image_tag"parking.png", {class:"small-image"}%></div>
-            <div><p>Street Parking</p></div>
+            <div class="aminity-text"><p>Street Parking</p></div>
           </div>
         </div>
       </div>
     </div>
   <div class="wrap-house-rules">
-    <h5 class="titles">House Rules</h5>
+    <h5 class="titles"><b>House Rules</b></h5>
     <div id="house-rules-flex">
       <div class="house-rules-left">
         <p>Check in at front desk with ID</p>
@@ -66,7 +68,7 @@
   </div>
   <div class="wrap-cancellation">
     <div id="cancellation">
-      <h5 class="titles">Cancellations</h5>
+      <h5 class="titles"><b>Cancellations</b></h5>
       <p>Cancel up to 24 hours before check in and get a full refund (minus service fees) </p>
       <p>Reschedule up to 12 hours before alotted time</p>
     </div>
@@ -76,15 +78,18 @@
    <div id="reservation_form">
    <!-- <input type="button" class='datepicker' > -->
   
-    <h2> Book Now!</h2>
+    <h2> <b>Book Now!</b></h2>
     <%= form_for [@listing, @reservation] do |form| %>
 
      <%= form.text_field :start_time, id: "datetimepicker" %>
      <div id="reservation-calander">
-        <h4> Duration of booking : </h4>  
+        <div class="booking-title">
+          <h4> Duration of booking : </h4>  
+        </div>
+
         <%= form.select :duration, options_for_select(Reservation::TIME_OPTIONS), class:"calender-select"%>
        <div class="submit-field">
-         <%= form.submit "confirm booking" , :class => 'calendar-submit', :style =>"margin-bottom: 15px; margin-left: 40px; width: 120px; border: 2px solid orange; background-color: white; color: orange; border-radius: 5px;"%>
+         <%= form.submit "confirm booking" , :class => 'calendar-submit', :style =>" margin-bottom: 10px; margin-left: 40px; width: 120px; height: 40px; border: 2px solid orange; background-color: white; color: orange; border-radius: 5px;"%>
        </div>
     <% end %>
 
@@ -101,7 +106,7 @@
 </div>
 
 <div class="recommended">
-    <h1> Check Out This Other Places! </h1>
+    <h1> Check Out These Other Places! </h1>
     <% @recommended.sample(4).each do |t| %>
       <div class="others col-md-3">
         <%if t.avatar[0] == nil %>
