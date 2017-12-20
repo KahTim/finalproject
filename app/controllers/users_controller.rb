@@ -26,7 +26,18 @@ class UsersController < Clearance::UsersController
 	end
 
 	def show
-		@reservation = Reservation.where(user_id: current_user.id) 
+		if current_user.customer?
+			@reservation = Reservation.where(user_id: current_user.id) 
+		else
+			# @listings = Listing.where(user_id: current_user.id)
+			@listings = current_user.listings
+			@reservation = []
+				@listings.each do |t|
+					if Reservation.find_by(listing_id: t.id)
+					@reservation << Reservation.where(listing_id: t.id)
+					end
+				end
+		end
 	end 
 
 	private 

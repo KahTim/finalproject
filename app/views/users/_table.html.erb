@@ -1,6 +1,10 @@
 <div id="wrapper3">
         <div id="management-profile-header">
-            <h2>Reservation History</h2>
+            <% if current_user.customer? %>
+                <h2>Reservation History</h2>
+            <% else %>
+                <h2>Current Reservations</h2>
+            <% end %>
         </div>
     <table class="cinereousTable">
         <thead class="table-wrap">
@@ -14,16 +18,34 @@
             <th>Total Price</th>
             </tr>
         </thead>
-            <% @reservation.each do |r|%>
-              <tr>
-                <td><%= r.listing.title%></td>
-                <td><%= r.listing.address%>, <%= r.listing.city%></td>
-                <td><%= r.listing.category%></td>
-                <td><%= r.start_time %></td>
-                <td><%= r.end_time %></td>
-                <td><%= (r.end_time - r.start_time)/3600 %> Hours</td>
-                <td>RM <%= (r.listing.price) * (r.end_time - r.start_time)/3600%></td>
-              </tr>
+            <%if current_user.customer? %>
+                <% @reservation.each do |r|%>
+                  <tr>
+                    <td><%= r.listing.title%></td>
+                    <td><%= r.listing.address%>, <%= r.listing.city%></td>
+                    <td><%= r.listing.category%></td>
+                    <td><%= r.start_time %></td>
+                    <td><%= r.end_time %></td>
+                    <td><%= (r.end_time - r.start_time)/3600 %> Hours</td>
+                    <td>RM <%= (r.listing.price) * (r.end_time - r.start_time)/3600%></td>
+                  </tr>
+                <%end%>
+            <%else%>
+                
+                <% @reservation.each do |r|%>
+                    <% r.each do |x| %>
+                      <tr>
+                        <td><%= x.listing.title%></td>
+                        <td><%= x.listing.address%>, <%= x.listing.city%></td>
+                        <td><%= x.listing.category%></td>
+                        <td><%= x.start_time %></td>
+                        <td><%= x.end_time %></td>
+                        <td><%= (x.end_time - x.start_time)/3600 %> Hours</td>
+                        <td>RM <%= (x.listing.price) * (x.end_time - x.start_time)/3600%></td>
+                      </tr>
+                    <% end %>
+                <%end%>
+
             <%end%>
     </table>
 </div>
