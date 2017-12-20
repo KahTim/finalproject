@@ -9,6 +9,16 @@
 	height: 720px;
 }
 
+.mainline{
+   color: #424147;
+}
+
+.subline{
+   color: #424147;
+   font-weight: bold;
+}
+
+
 .main.jumbotron{
    margin-bottom: 0px;
 }
@@ -118,7 +128,7 @@ zoom:1;
  margin-top: 2em;
  text-align: center;
  border-radius: 10px;
- background-color: rgba(212, 216, 221, .5);
+ background-color: rgba(212, 216, 221, .6);
  width: 75%;
 }
 
