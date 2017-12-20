@@ -1,0 +1,26 @@
+
+
+<div class="flex-container">
+    <div class="category"><%=link_to (image_tag "badminton.png", {class:"badminton"}), listings_path(category: 'Badminton' )%> </div>
+    <div class="category"><%=link_to (image_tag "bbq.png", {class:"bbq"}), listings_path(category: 'BBQ' )%> </div>
+    <div class="category"><%=link_to (image_tag "basketball.png", {class:"basketball"}), listings_path(category: 'Basketball' )%> </div>
+    <div class="category"><%=link_to (image_tag "gym.png", {class:"gym"}), listings_path(category: 'GYM' )%> </div>
+    <div class="category"><%=link_to (image_tag "swim.png", {class:"swim"}), listings_path(category: 'Swimming Pool' )%> </div>
+    <div class="category"><%=link_to (image_tag "tennis.png", {class:"tennis"}), listings_path(category: 'Tennis' )%> </div>
+</div>
+
+<div id="flex-layout-listings">
+    <% @listings.each do |t| %>
+
+    <div class="listing-column">
+        <%if t.avatar[0] == nil %>
+            <%=link_to(image_tag("property_default.jpg", :class => "listing-image"), t)%>
+        <%else%>
+            <%=link_to(image_tag(t.avatar[0], :class => "listing-image"), t)%>
+        <%end%>
+        <p class="listing-title"><%=t.title%></p>
+        <p class="listing-city"><%=t.city%></p>
+        <p class="listing-price"><span>Cost per hour: RM</span><%=t.price%></p>
+    </div>
+    <%end%>
+</div>

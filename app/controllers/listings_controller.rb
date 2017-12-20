@@ -36,6 +36,9 @@ class ListingsController < ApplicationController
 		@recommended = Listing.where(category: @listing.category)
 		@reservation = Reservation.new
 	end
+	def management_property
+		@listings = current_user.listings
+	end
 
 private
 
