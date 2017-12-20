@@ -17,6 +17,11 @@ class ReservationsController < ApplicationController
 			render new_listing_reservation_path(@listing.id)
 		end 
 	end
+	def destroy
+		@reservation = Reservation.find(params[:id])
+     	@reservation.destroy
+        redirect_to user_path
+	end
 
 	private 
 

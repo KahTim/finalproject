@@ -13,8 +13,10 @@ Rails.application.routes.draw do
   end
 
   resources :listings, controller: "listings" do 
-    resources :reservations, controller: "reservations"
+    resources :reservations, only: [:create, :new]
   end 
+  resources :reservations, only: [:destroy]
+
 
   get "/sign_in" => "clearance/sessions#new", as: "sign_in"
   delete "/sign_out" => "clearance/sessions#destroy", as: "sign_out"
