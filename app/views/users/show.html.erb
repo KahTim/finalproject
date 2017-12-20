@@ -24,7 +24,7 @@
                 <% if current_user.customer? %>
                     <p class="management-box"><%= link_to "Listing Index",listings_path%></p>
                 <% else %>
-                    <p class="management-box"><%= link_to "My Listings",listings_path%></p>
+                    <p class="management-box"><%= link_to "My Listings",listing_management_property_path%></p>
                 <% end %>
             </div>
 

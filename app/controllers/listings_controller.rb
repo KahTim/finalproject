@@ -12,7 +12,7 @@ class ListingsController < ApplicationController
 	end
 	
 	def create
-		@listing = Listing.new(params_for_listings)
+		@listing = current_user.listings.new(params_for_listings)
 
 		if @listing.save
 			redirect_to root_url
@@ -36,8 +36,10 @@ class ListingsController < ApplicationController
 		@recommended = Listing.where(category: @listing.category)
 		@reservation = Reservation.new
 	end
+
 	def management_property
 		@listings = current_user.listings
+		# byebug
 	end
 
 private
