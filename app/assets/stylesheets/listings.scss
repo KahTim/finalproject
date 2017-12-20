@@ -283,6 +283,7 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
     flex-wrap: wrap;
     justify-content: center;
     background-color: #006680;
+    height: 720px;
 }
 
 #flex-layout-listings>.listing-column{
@@ -353,7 +354,7 @@ img, .badminton, .bbq, .basketball, .gym, .swim, .tennis{
 
 /// New Listing Page ///
 #wrapper-new-listings{
-  background-image: url("city-3.jpg");
+  background-image: url("https://s3-ap-southeast-1.amazonaws.com/tether-next/tether-next/city-3.jpg");
   width: 100%;
   height: 100vh;
   background-size: cover;
