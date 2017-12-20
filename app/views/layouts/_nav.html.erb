@@ -1,6 +1,7 @@
 <ul>
-  <li><a class="active" href="/">FacHub</a></li>
-  <li><a href="/listings">All Listings</a></li>
+  <div class="navbar-header">
+    <%= link_to "Tether", root_path, class:"navbar-brand"%>
+  </div>  <li><a href="/listings">All Listings</a></li>
   <lu class="navbar-right">
        <% if signed_in?%>
           <%if current_user.image == nil%>
