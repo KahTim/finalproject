@@ -6,7 +6,7 @@
         <div id="profile-settings-main">
             <div id="profile-pic">
                 <% if current_user.image == nil %>
-                    <%= image_tag "profile_picture.png", :id => 'profile_picture_size' %>
+                    <%= image_tag "http://gazettereview.com/wp-content/uploads/2016/03/facebook-avatar.jpg", :id => 'profile_picture_size' %>
                 <%else%>
                      <%= image_tag current_user.image, :id => 'profile_picture_size' %>    
                 <%end%>

@@ -5,7 +5,7 @@
   <lu class="navbar-right">
        <% if signed_in?%>
           <%if current_user.image == nil%>
-            <li><%= link_to (image_tag 'profile_picture', {class:"profile-pic"}) ,user_path(current_user.id) %></li>
+            <li><%= link_to (image_tag 'http://gazettereview.com/wp-content/uploads/2016/03/facebook-avatar.jpg', {class:"profile-pic"}) ,user_path(current_user.id) %></li>
           <%else%>
             <li><%= link_to (image_tag current_user.image, {class:"profile-pic"}) , user_path(current_user.id) %> </li>
           <%end%>
